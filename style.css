@@ -24,6 +24,15 @@
         height:100%;
         overflow:auto;
     }
+
+    .white-container {
+        background-color: white;
+        height:100%;
+        overflow:auto;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
     .navbar {
         /* @extend #blurryscroll; */
         /* filter: none; */
@@ -91,6 +100,18 @@
     .appstore-download-tip{
         font-size: 12px;
         color: gray;
+    }
+
+    .centralized-content{
+        text-align:center;
+    }
+
+    .iphones{
+        width: 80%;
+        align-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
     }
 }
 

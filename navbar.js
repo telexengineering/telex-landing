@@ -34,8 +34,8 @@ $(document).ready(function(){
 
         event.stopPropagation();
         $("body").not(".dropdown-menu").click(function(){
-        $(".dropdown-menu").fadeOut(500);
-        dropDownVisible = false;
+            $(".dropdown-menu").fadeOut(500);
+            dropDownVisible = false;
         });
     });
 
