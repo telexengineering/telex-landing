@@ -1,16 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Telex Landings</title>
+<title>Landing</title>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  var navBarVisible = false;
+  var dropDownVisible = false;
+  $(document).ready(function(){
+  
+    $(".navbar-toggler").click(function(){
+      if (!navBarVisible) {
+        $(".nav-shadow").fadeIn(500);
+        navBarVisible = true;
+      } else {
+        $(".nav-shadow").fadeOut(500);
+        navBarVisible = false;
+      }
+    });
+
+    $("#navbarDropdown").click(function(event){
+      if (!dropDownVisible) {
+        $(".dropdown-menu").fadeIn(500);
+        dropDownVisible = true;
+      } else {
+        $(".dropdown-menu").fadeOut(500);
+        dropDownVisible = false;
+      }
+
+      event.stopPropagation();
+      $("body").not(".dropdown-menu").click(function(){
+        $(".dropdown-menu").fadeOut(500);
+        dropDownVisible = false;
+      });
+    });
+    
+  });
+</script>
 </head>
 <body>
+<!-- start of navbar section -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <ul class="navbar-nav lang-dropdown">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe-europe"></i></a>
+            <div class="dropdown-menu" id="lang-dropdown" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">English</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Arabic</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Italian</a>
+            </div>
+          </li>
+        </ul>
+        <a class="navbar-brand" href="#">Telex</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon">X</span>
+          <span id="navbar-icon" class="navbar-toggler-icon"></span>
         </button>
-      
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -30,7 +80,36 @@
             </li>
           </ul>
         </div>
-      </nav>
+    </nav>
+    <div class="nav-shadow">
+        <div class="nav-item vertical-nav-item">WHY TELEX?</div>
+        <div class="nav-item vertical-nav-item">FEATURES</div>
+        <div class="nav-item vertical-nav-item">SUPPORT</div>
+        <div class="nav-item vertical-nav-item">CONTACT</div>
+        <div class="nav-item vertical-nav-item">PRICING</div>
+    </div>
+<!-- end of navbar section -->
+
+    <div class="post-box">
+      <b>
+        Next<br>
+        Generation<br>
+      </b>
+      <b style="color: #0fa4d8;">Telegram Client</b><br>
+      <img src="images/telegram-logo.svg.webp" style="width:15%"><br>
+      <div class="apple-announce"><i class="fab fa-apple"></i> Telex for iPhone/iPad</div>
+      <div class="appstore-download-btn">Download from AppStore</div>
+      <div class="appstore-download-tip">Available on iOS 9 and above</div>
+    </div>
+
+    <div class="red-post-box">
+      We Design A<br>
+      Unique<br>
+      Messaging<br>
+      Experience<br>
+
+      We are like a Coat to Telegram
+    </div>
 </body>
 </html>
 
