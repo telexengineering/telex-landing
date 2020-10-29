@@ -8,41 +8,10 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-  var navBarVisible = false;
-  var dropDownVisible = false;
-  $(document).ready(function(){
-  
-    $(".navbar-toggler").click(function(){
-      if (!navBarVisible) {
-        $(".nav-shadow").fadeIn(500);
-        navBarVisible = true;
-      } else {
-        $(".nav-shadow").fadeOut(500);
-        navBarVisible = false;
-      }
-    });
-
-    $("#navbarDropdown").click(function(event){
-      if (!dropDownVisible) {
-        $(".dropdown-menu").fadeIn(500);
-        dropDownVisible = true;
-      } else {
-        $(".dropdown-menu").fadeOut(500);
-        dropDownVisible = false;
-      }
-
-      event.stopPropagation();
-      $("body").not(".dropdown-menu").click(function(){
-        $(".dropdown-menu").fadeOut(500);
-        dropDownVisible = false;
-      });
-    });
-    
-  });
-</script>
+<script src="navbar.js"></script>
 </head>
 <body>
+  <div id="blurryscroll" aria-hidden="true"></div>
 <!-- start of navbar section -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <ul class="navbar-nav lang-dropdown">
@@ -91,6 +60,7 @@
         <div class="nav-item vertical-nav-item">PRICING</div>
     </div>
 <!-- end of navbar section -->
+<main id="content">
     <div class="black-container">
       <div class="post-box" style="margin-top:30%;">
         <b>
@@ -144,6 +114,7 @@
         Features
       </div>
     </div>
+</main>
 </body>
 </html>
 
