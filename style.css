@@ -101,7 +101,7 @@
     }
 
     .appstore-download-btn{
-        background-image: linear-gradient(to right, blue,indigo);
+        background-image: linear-gradient(to right, #7b05dd,#457be0);
         padding: 3%;
         margin: 5%;
         border-radius: 25px;
