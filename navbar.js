@@ -2,13 +2,15 @@ var navBarVisible = false;
 var dropDownVisible = false;
 $(document).ready(function(){
     // start of blurry navbar script
-    var pageContent = document.getElementById("content"),
-	pagecopy = pageContent.cloneNode(true),
-	blurryContent = document.getElementById("blurryscroll");
-	blurryContent.appendChild(pagecopy);
-    $(window).scroll(function(){
-        blurryContent.scrollTop = window.pageYOffset; 
-    });
+    if ($(".mobile-screen").css("font-size") == "1px" ){
+        var pageContent = document.getElementById("content"),
+        pagecopy = pageContent.cloneNode(true),
+        blurryContent = document.getElementById("blurryscroll");
+        blurryContent.appendChild(pagecopy);
+        $(window).scroll(function(){
+            blurryContent.scrollTop = window.pageYOffset; 
+        });
+    }
     // end of blurry navbar script
 
     $(".navbar-toggler").click(function(){

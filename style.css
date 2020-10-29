@@ -1,4 +1,15 @@
+/* this class property is used by Javascript to detect whether the screen is "mobile or desktop" */
+.mobile-screen {
+    display:none;
+    font-size:3px;
+}
+
 @media screen and (max-width: 600px) {
+    .mobile-screen {
+        display:none;
+        font-size:1px;
+    }
+
     #blurryscroll { 
         top: 0%;
         left: 0; 
