@@ -19,8 +19,12 @@
         position: fixed;
         backdrop-filter: blur(4px);
         display: block;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
     }
-    
+
     .black-container {
         background-color: black;
         height:100%;
