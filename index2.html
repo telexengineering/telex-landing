@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Test scroll rotation</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <style>
+            #origin{
+                left: 48%;
+                top: 50%;
+                display: block;
+                font-weight: bold;
+                color:red;
+                position: fixed;
+            }
+            #bullet{
+                left: 70%;
+                top: 50%;
+                color:blue;
+                font-weight: bold;
+                display: block;
+                position: fixed;
+            }
+            .container {
+                height:6000px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            theta = 0;
+            deltaTheta = -0.05
+            finishTheta = -6.08
+            xcenter = 192
+            ycenter = 366
+
+            function moveit() {
+                console.log("run")
+                console.log(theta)
+
+                canContinue = theta > finishTheta
+
+                theta += deltaTheta;
+                var r = 77;         // radius
+
+                var newLeft = Math.floor(xcenter + (r * Math.cos(theta)));
+                var newTop = Math.floor(ycenter + (r * Math.sin(theta)));
+
+                $('#bullet').animate({
+                    top: newTop,
+                    left: newLeft,
+                },30, function() {
+                    if (canContinue) {
+                        moveit();
+                    }
+                });
+            }
+
+            function recalculateDeltaTheta(scrollTopDelta, maxScrollTop) {
+                maxRotation = 6.28
+                deltaTheta = (maxRotation * scrollTopDelta)/maxScrollTop
+            }
+
+            function scrollMoveit() {
+                console.log("run")
+                console.log(theta)
+
+                canContinue = theta > finishTheta
+                if (!canContinue) {
+                    return
+                }
+
+                theta += deltaTheta;
+                var r = 77;         // radius
+
+                var newLeft = Math.floor(xcenter + (r * Math.cos(theta)));
+                var newTop = Math.floor(ycenter + (r * Math.sin(theta)));
+
+                $('#bullet').animate({
+                    top: newTop,
+                    left: newLeft,
+                },30, function() {
+                    if (canContinue) {
+                        // moveit();
+                    }
+                });
+            }
+
+            // function prepareFinishTheta
+
+            function backwardMoveit() {
+                console.log("run")
+                console.log(theta)
+                console.log(finishTheta)
+                console.log(theta < finishTheta)
+
+                deltaTheta = 0.05
+                finishTheta = 6.28
+
+                canContinue = theta < finishTheta
+
+                theta = theta + deltaTheta;
+                var r = 77;         // radius
+
+                var newLeft = Math.floor(xcenter + (r * Math.cos(theta)));
+                var newTop = Math.floor(ycenter + (r * Math.sin(theta)));
+
+                $('#bullet').animate({
+                    top: newTop,
+                    left: newLeft,
+                },30, function() {
+                    if (canContinue) {
+                        backwardMoveit();
+                    }
+                });
+            }
+
+            $(document).ready(function(){
+                maxScrollTop = $(document).height() - $(window).height()
+                maxScrollTop = 5267
+                console.log("document_height:" + $(document).height())
+                console.log("window_height:" + $(window).height())
+                console.log("max_scroll_top:" + maxScrollTop)
+
+                $(window).scroll(function(e){
+                    var elem = e.target;
+                    var isDoc = elem === document;
+                    var targetData = jQuery.data(event.target);
+                    var oldTop = targetData.top || 0;
+                    targetData.top = isDoc ? elem.documentElement.scrollTop + elem.body.scrollTop : elem.scrollTop;
+                    scrollTopDelta = targetData.top - oldTop;
+                    scrollTop = targetData.top;
+                    
+
+                    console.log(scrollTop);
+                    if (scrollTopDelta > 0) {
+                        recalculateDeltaTheta(scrollTopDelta, maxScrollTop)
+                        console.log("scrollTopDelta:" + scrollTopDelta)
+                        console.log("maxScrollTop:" + maxScrollTop)
+                        scrollMoveit()
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            Hello
+            <div id="origin">O</div>
+            <div id="bullet">O</div>
+        </div>
+    </body>
+</html>

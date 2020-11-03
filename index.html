@@ -9,6 +9,124 @@
 <link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="navbar.js"></script>
+<script>
+  var theta = +0.8;
+    deltaTheta = -0.05;
+    deltaCenterX = -1
+    xcenter = 35;
+    ycenter = -132;
+    finishTheta = -3.14 + 0.8;
+    animationPhase = 1 
+
+    // finishTheta = 6.28
+
+  function moveit() {
+    console.log("run")
+    console.log(theta)
+    console.log(theta < finishTheta)
+
+    deltaTheta = -1 * Math.abs(deltaTheta)
+    canContinue = theta > finishTheta
+
+    theta += deltaTheta;
+    var r = 200;         // radius
+    // var xcenter = 35;
+    // var ycenter = -132;
+
+    var newLeft = Math.floor(xcenter + (r * Math.cos(theta)));
+    var newTop = Math.floor(ycenter + (r * Math.sin(theta)));
+
+    $('#telex-logo').animate({
+        top: newTop,
+        left: newLeft,
+    },30, function() {
+	    if (canContinue) {
+        moveit();
+      } else {
+        if (animationPhase == 1) {
+          animationPhase = 2;
+          xcenter = xcenter - 160
+          finishTheta = finishTheta - 3.05
+          moveit()
+        }
+      }
+    });
+  }
+
+  function recalculateDeltaTheta(scrollTopDelta, maxScrollTop)
+  {
+    maxRotation = -6.19 // -3.14 + (-3.05)
+    deltaTheta = (scrollTopDelta * maxRotation)/maxScrollTop
+  }
+
+  function scrollMoveit() {
+    console.log("run")
+    console.log(theta)
+    console.log(theta < finishTheta)
+
+    deltaTheta = -1 * Math.abs(deltaTheta)
+    canContinue = theta > finishTheta
+    if (!canContinue) {
+      if (animationPhase == 1) {
+          animationPhase = 2;
+          xcenter = xcenter - 160
+          finishTheta = finishTheta - 3.05
+          // moveit()
+        }
+      return
+    }
+
+    theta += deltaTheta;
+    var r = 200;         // radius
+    // var xcenter = 35;
+    // var ycenter = -132;
+
+    var newLeft = Math.floor(xcenter + (r * Math.cos(theta)));
+    var newTop = Math.floor(ycenter + (r * Math.sin(theta)));
+
+    $('#telex-logo').animate({
+        top: newTop,
+        left: newLeft,
+    },30, function() {
+	    if (canContinue) {
+        // moveit();
+      } else {
+        if (animationPhase == 1) {
+          animationPhase = 2;
+          xcenter = xcenter - 160
+          finishTheta = finishTheta - 3.05
+          // moveit()
+        }
+      }
+    });
+  }
+
+  
+  $(document).ready(function(){
+    console.log("Window width:" + $(window).width())
+    console.log("Window height:" + $(window).height())
+    maxScrollTop = $(document).height() - $(window).height()
+    console.log("Max scroll top:" + maxScrollTop)
+    moveit(false);
+    // alert($("#telex-logo").css('top'));
+    $(window).scroll(function(e){
+      var elem = e.target;
+      var isDoc = elem === document;
+      var targetData = jQuery.data(event.target);
+      var oldTop = targetData.top || 0;
+      targetData.top = isDoc ? elem.documentElement.scrollTop + elem.body.scrollTop : elem.scrollTop;
+      scrollTopDelta = targetData.top - oldTop;
+      scrollTop = targetData.top;
+
+      console.log(scrollTop);
+      if (scrollTopDelta > 0) {
+        recalculateDeltaTheta(scrollTopDelta, maxScrollTop)
+        // scrollMoveit()
+      }
+    })
+  })
+
+</script>
 </head>
 <body>
   <div class="mobile-screen"></div>
@@ -27,7 +145,7 @@
           </div>
         </li>
       </ul>
-      <a class="navbar-brand" href="#">Telex4</a>
+      <a href="#"><img id="telex-logo" src="images/telex-logo.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span id="navbar-icon" class="navbar-toggler-icon"></span>
       </button>
