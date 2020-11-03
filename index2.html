@@ -25,6 +25,7 @@
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
+            /*
             theta = 0;
             deltaTheta = -0.05
             finishTheta = -6.08
@@ -111,33 +112,60 @@
                     }
                 });
             }
+            */
 
-            $(document).ready(function(){
-                maxScrollTop = $(document).height() - $(window).height()
-                maxScrollTop = 5267
-                console.log("document_height:" + $(document).height())
-                console.log("window_height:" + $(window).height())
-                console.log("max_scroll_top:" + maxScrollTop)
+            // $(document).ready(function(){
+            //     maxScrollTop = $(document).height() - $(window).height()
+            //     maxScrollTop = 5267
+            //     console.log("document_height:" + $(document).height())
+            //     console.log("window_height:" + $(window).height())
+            //     console.log("window_inner_height:" + window.innerHeight)
+            //     console.log("max_scroll_top:" + maxScrollTop)
 
-                $(window).scroll(function(e){
-                    var elem = e.target;
-                    var isDoc = elem === document;
-                    var targetData = jQuery.data(event.target);
-                    var oldTop = targetData.top || 0;
-                    targetData.top = isDoc ? elem.documentElement.scrollTop + elem.body.scrollTop : elem.scrollTop;
-                    scrollTopDelta = targetData.top - oldTop;
-                    scrollTop = targetData.top;
+            //     $(window).scroll(function(e){
+            //         var elem = e.target;
+            //         var isDoc = elem === document;
+            //         var targetData = jQuery.data(event.target);
+            //         var oldTop = targetData.top || 0;
+            //         targetData.top = isDoc ? elem.documentElement.scrollTop + elem.body.scrollTop : elem.scrollTop;
+            //         scrollTopDelta = targetData.top - oldTop;
+            //         scrollTop = targetData.top;
                     
 
-                    console.log(scrollTop);
-                    if (scrollTopDelta > 0) {
-                        recalculateDeltaTheta(scrollTopDelta, maxScrollTop)
-                        console.log("scrollTopDelta:" + scrollTopDelta)
-                        console.log("maxScrollTop:" + maxScrollTop)
-                        scrollMoveit()
-                    }
-                })
-            })
+            //         console.log(scrollTop);
+            //         if (scrollTopDelta > 0) {
+            //             recalculateDeltaTheta(scrollTopDelta, maxScrollTop)
+            //             console.log("scrollTopDelta:" + scrollTopDelta)
+            //             console.log("maxScrollTop:" + maxScrollTop)
+            //             scrollMoveit()
+            //         }
+            //     })
+            // })
+
+            window.addEventListener('scroll', function(){
+                theta = 0;
+                // deltaTheta = -0.05
+                finishTheta = -6.08
+                xcenter = 192
+                ycenter = 366
+
+                canContinue = theta > finishTheta
+
+                deltaTheta = Math.min((window.scrollY / window.innerHeight) * 6.08, 6.08)
+                deltaTheta = -1 * Math.abs(deltaTheta)
+
+                theta += deltaTheta;
+                var r = 77;         // radius
+
+                var newLeft = Math.floor(xcenter + (r * Math.cos(theta)));
+                var newTop = Math.floor(ycenter + (r * Math.sin(theta)));
+
+                $('#bullet').animate({
+                    top: newTop,
+                    left: newLeft,
+                },30);
+
+            });
         </script>
     </head>
     <body>
