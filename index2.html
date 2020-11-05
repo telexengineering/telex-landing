@@ -13,9 +13,18 @@
             }
             
             @keyframes rotate {
-                    from { 	-webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
-                    to   {  -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
-                }
+                    0% {
+                        -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg);
+                    }
+
+                    30% {
+                        -webkit-transform: rotate(-45deg) translateX(150px) rotate(+45deg);
+                    }
+
+                    100% {
+                        -webkit-transform: rotate(-315deg) translateX(75px) rotate(+315deg);
+                    }
+            }
 
             #bullet{
                 left: 192px;

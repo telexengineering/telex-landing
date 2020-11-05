@@ -1,0 +1,144 @@
+/* this class property is used by Javascript to detect whether the screen is "mobile or desktop" */
+.mobile-screen {
+    display:none;
+    font-size:3px;
+}
+
+@media screen and (max-width: 600px) {
+    .mobile-screen {
+        display:none;
+        font-size:1px;
+    }
+
+    .black-container {
+        background-color: black;
+        height:100%;
+        overflow:auto;
+    }
+
+    .white-container {
+        background-color: white;
+        height:100%;
+        overflow:auto;
+        font-weight: bold;
+        font-size: 20px;
+        padding:10px;
+    }
+
+    .navbar {
+        width:100%;
+        height:10%;
+        /* opacity:0.9; */
+        position: fixed;
+        background: rgba(0,0,0,0.7);
+        /* backdrop-filter: saturate(80%) blur(20px); */
+        backdrop-filter: blur(20px);
+        /* -webkit-backdrop-filter: saturate(80%) blur(20px); */
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    #telex-logo{
+        width: 43px;
+        position: absolute;
+        top: 18px;
+        left: 44%;
+        right: auto;
+    }
+
+    .nav-shadow {
+        position: fixed;
+        top:10%;
+        width:100%;
+        height:50%;
+        background-color:gray;
+        opacity:0.9;
+        display: none;
+    }
+
+    .blur {
+        backdrop-filter: blur(5px);
+    }
+
+    .nav-item {
+        width:100%;
+        height:20%;
+        font-size:20px;
+        text-align: center;
+        color:white;
+        padding: 6%;
+    }
+    .vertical-nav-item{
+        border-color: white;
+        border-width: 0 0 1px 0;
+        border-style: solid;
+    }
+
+    #lang-dropdown{
+        position: absolute;
+        top: 75%;
+    }
+
+    #navbarDropdown {
+        font-size:35px;
+    }
+
+    .navbar-brand{
+        margin-left:8%;
+    }
+
+    .post-box {
+        color: white;
+        width: 90%;
+        height: 50%;
+        padding:5%;
+        margin: 10% auto 10% auto;
+        border-radius: 5px;
+        display:block;
+    }
+
+    .black-gradient-box{
+        background-image: linear-gradient(to bottom, #222, #161a26);
+    }
+
+    .red-gradient-box{
+        background-image: linear-gradient(to bottom, #c22f2b , #ce5a5c);
+    }
+
+    .centralized-content{
+        text-align:center;
+    }
+
+    .appstore-download-btn{
+        background-image: linear-gradient(to right, #7b05dd,#457be0);
+        padding: 3%;
+        margin: 50% 5% 5% 5%;
+        border-radius: 25px;
+    }
+
+    .appstore-download-tip{
+        font-size: 12px;
+        color: gray;
+    }
+
+    .iphones{
+        width: 80%;
+        align-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
+
+    .our-motto{
+        margin-top:15%;
+    }
+
+    .yellow-text{
+        color:#f9ca1e;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .nav-shadow {
+        display:none;
+    }
+}

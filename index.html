@@ -1,239 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Landing</title>
+<title>Telex Application</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="navbar.js"></script>
-<script>
-  var theta = +0.8;
-    deltaTheta = -0.05;
-    deltaCenterX = -1
-    xcenter = 35;
-    ycenter = -132;
-    finishTheta = -3.14 + 0.8;
-    animationPhase = 1 
-
-    // finishTheta = 6.28
-
-  function moveit() {
-    console.log("run")
-    console.log(theta)
-    console.log(theta < finishTheta)
-
-    deltaTheta = -1 * Math.abs(deltaTheta)
-    canContinue = theta > finishTheta
-
-    theta += deltaTheta;
-    var r = 200;         // radius
-    // var xcenter = 35;
-    // var ycenter = -132;
-
-    var newLeft = Math.floor(xcenter + (r * Math.cos(theta)));
-    var newTop = Math.floor(ycenter + (r * Math.sin(theta)));
-
-    $('#telex-logo').animate({
-        top: newTop,
-        left: newLeft,
-    },30, function() {
-	    if (canContinue) {
-        moveit();
-      } else {
-        if (animationPhase == 1) {
-          animationPhase = 2;
-          xcenter = xcenter - 160
-          finishTheta = finishTheta - 3.05
-          moveit()
-        }
-      }
-    });
-  }
-
-  function recalculateDeltaTheta(scrollTopDelta, maxScrollTop)
-  {
-    maxRotation = -6.19 // -3.14 + (-3.05)
-    deltaTheta = (scrollTopDelta * maxRotation)/maxScrollTop
-  }
-
-  function scrollMoveit() {
-    console.log("run")
-    console.log(theta)
-    console.log(theta < finishTheta)
-
-    deltaTheta = -1 * Math.abs(deltaTheta)
-    canContinue = theta > finishTheta
-    if (!canContinue) {
-      if (animationPhase == 1) {
-          animationPhase = 2;
-          xcenter = xcenter - 160
-          finishTheta = finishTheta - 3.05
-          // moveit()
-        }
-      return
-    }
-
-    theta += deltaTheta;
-    var r = 200;         // radius
-    // var xcenter = 35;
-    // var ycenter = -132;
-
-    var newLeft = Math.floor(xcenter + (r * Math.cos(theta)));
-    var newTop = Math.floor(ycenter + (r * Math.sin(theta)));
-
-    $('#telex-logo').animate({
-        top: newTop,
-        left: newLeft,
-    },30, function() {
-	    if (canContinue) {
-        // moveit();
-      } else {
-        if (animationPhase == 1) {
-          animationPhase = 2;
-          xcenter = xcenter - 160
-          finishTheta = finishTheta - 3.05
-          // moveit()
-        }
-      }
-    });
-  }
-
-  
-  $(document).ready(function(){
-    console.log("Window width:" + $(window).width())
-    console.log("Window height:" + $(window).height())
-    maxScrollTop = $(document).height() - $(window).height()
-    console.log("Max scroll top:" + maxScrollTop)
-    moveit(false);
-    // alert($("#telex-logo").css('top'));
-    $(window).scroll(function(e){
-      var elem = e.target;
-      var isDoc = elem === document;
-      var targetData = jQuery.data(event.target);
-      var oldTop = targetData.top || 0;
-      targetData.top = isDoc ? elem.documentElement.scrollTop + elem.body.scrollTop : elem.scrollTop;
-      scrollTopDelta = targetData.top - oldTop;
-      scrollTop = targetData.top;
-
-      console.log(scrollTop);
-      if (scrollTopDelta > 0) {
-        recalculateDeltaTheta(scrollTopDelta, maxScrollTop)
-        // scrollMoveit()
-      }
-    })
-  })
-
-</script>
 </head>
 <body>
-  <div class="mobile-screen"></div>
-<!-- start of navbar section -->
-    <!-- <nav class="navbar-expand-lg navbar-dark bg-dark navbar"> -->
-    <nav class="navbar">
-      <ul class="navbar-nav lang-dropdown">
-        <li class="nav-item dropdown">
-          <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe-europe"></i></a>
-          <div class="dropdown-menu" id="lang-dropdown" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">English</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Arabic</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Italian</a>
+  <nav class="navbar">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"/>
+    </svg>
+    <div class="selected-lang">EN</div>
+    <img src="images/telex-logo.png" id="telex-logo">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+    </svg>
+  </nav>
+  <main>
+    <div class="dark-container">
+          <div class="postbox first-postbox dark-postbox-bg centralized-content">
+            <div class="postbox-large-text">
+              <b>
+                Next<br>
+                Generation<br>
+              </b>
+              <b style="color: #0fa4d8;">Telegram Client</b><br>
+              <img src="images/telegram-logo.png" class="telegram-logo"><br>
+            </div>
+            <div class="apple-announce"><img class='apple-icon' src="images/apple-logo.png"></i> Telex for iPhone/iPad</div>
+            <div class="appstore-download-btn">
+              <svg viewBox="0 0 24 24" class="download-icon">
+                <g fill="currentColor">
+                  <path d="M17.707 10.708L16.293 9.29398L13 12.587V2.00098H11V12.587L7.70697 9.29398L6.29297 10.708L12 16.415L17.707 10.708Z"></path><path d="M18 18.001V20.001H6V18.001H4V20.001C4 21.103 4.897 22.001 6 22.001H18C19.104 22.001 20 21.103 20 20.001V18.001H18Z"></path>
+                </g>
+              </svg>
+              Download from AppStore
+            </div>
+            <div class="appstore-download-tip">Available on iOS 9 and above</div>
           </div>
-        </li>
-      </ul>
-      <a href="#"><img id="telex-logo" src="images/telex-logo.png"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span id="navbar-icon" class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">WHY TELEX? <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">FEATURES</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">SUPPORT</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">CONTACT</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">PRICING</a>
-          </li>
-        </ul>
-      </div>
+          <div class="postbox red-postbox-bg motto-postbox">
+            <div class="first-motto">
+              We Design A<br>
+              Unique<br>
+              Messaging<br>
+              Experience<br>
+            </div>
+            <div class="second-motto centralized-content">
+              We are like a <b class="yellow-text">Coat</b><br>
+              to Telegram
+            </div>
+          </div>
 
-    </nav>
-    <div class="nav-shadow">
-        <div class="nav-item vertical-nav-item">WHY TELEX?</div>
-        <div class="nav-item vertical-nav-item">FEATURES</div>
-        <div class="nav-item vertical-nav-item">SUPPORT</div>
-        <div class="nav-item vertical-nav-item">CONTACT</div>
-        <div class="nav-item vertical-nav-item">PRICING</div>
+          <div class="postbox dark-postbox-bg features-postbox">
+            <div class="heading">
+              Premium<br>
+              Features
+            </div>
+          </div>
     </div>
-<!-- end of navbar section -->
-
-<main id="content">
-    <div class="black-container">
-      <div class="post-box black-gradient-box centralized-content" style="margin-top:30%;">
-        <b>
-          Next<br>
-          Generation<br>
-        </b>
-        <b style="color: #0fa4d8;">Telegram Client</b><br>
-        <img src="images/telegram-logo.png" style="width:15%"><br>
-        <div class="apple-announce"><i class="fab fa-apple"></i> Telex for iPhone/iPad</div>
-        <div class="appstore-download-btn">Download from AppStore</div>
-        <div class="appstore-download-tip">Available on iOS 9 and above</div>
-      </div>
-
-      <div class="post-box red-gradient-box">
-        <b>
-          We Design A<br>
-          Unique<br>
-          Messaging<br>
-          Experience<br>
-          <p class="our-motto centralized-content">
-            We are like a <b class="yellow-text">Coat</b><br>
-            to Telegram
-          </p>
-        </b>
-      </div>
-
-      <div class="post-box black-gradient-box">
-        <b>Premium<br>
-          Features</b>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-      </div>
-    </div>
-    <div class="white-container">
-      <div class="centralized-content">
-        What<br>
-        makes Telex<br>
-        different?
-      </div>
-      <p>
-        Designed for<br>
-        Every One's<br>
-        Favor
-      </p>
-      <img class="iphones" src="images/iphones.png">
-    </div>
-</main>
+  </main>
 </body>
 </html>
 
