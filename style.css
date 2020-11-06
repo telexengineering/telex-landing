@@ -270,7 +270,7 @@ body {
     width: 200px;
     position: relative;
     left: 50%;
-    top: -6%;
+    top: -21px;
 }
 
 .social-media-icon {
@@ -281,5 +281,5 @@ body {
     text-align: center;
     font-size: 13px;
     color: rgba(255,255,255,0.6);
-    padding: 15px 0 15px 0;
+    padding: 0 0 15px 0;
 }
