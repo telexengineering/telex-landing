@@ -212,3 +212,72 @@ body {
     left: 32px;
     margin-bottom:400px;
 }
+
+.landing-footer {
+    background-image: linear-gradient(to right, #23A0DD,#671BFF);
+    color: rgba(255,255,255,0.9);
+    /* height: 354px; */
+}
+
+.breadcrumbs {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 10px;
+}
+
+.breadcrumbs-hr {
+    border-color: rgba(255,255,255,0.3);
+    border-width: 1px;
+    position: relative;
+    top: -5px;
+}
+
+.telegram-footer-icon {
+    margin-right: 5px;
+}
+
+.breadcrumbs-arrow {
+    margin-right: 5px;
+}
+
+.breadcrumbs-golbe {
+    width: 16px;
+    height: 16px;
+    margin-left: 240px;
+    position: relative;
+    top: 2px;
+}
+
+.breadcrumbs-lang {
+    font-style: normal;
+    font-size: 13px;
+    padding-left: 2px;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding-left: 30px;
+    margin: 0px;
+}
+
+.footer-links li {
+    padding-top: 17px;
+}
+
+.social-media-links {
+    width: 200px;
+    position: relative;
+    left: 50%;
+    top: -6%;
+}
+
+.social-media-icon {
+    padding: 0 10px 0 10px;
+}
+
+.telex-company-name {
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    padding: 15px 0 15px 0;
+}
