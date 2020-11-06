@@ -9,6 +9,11 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: sfpro-display-black;
+    src: url(fonts/sfpro-display-black.ttf);
+}
+
 body {
     margin: 0px;
     font-family: sfpro-display;
@@ -61,6 +66,25 @@ body {
     background-color: #0E0F1D;
     z-index:0;
     overflow: auto;
+}
+
+.white-container {
+    background-color: #f6f7f7;
+}
+
+.white-container .heading1 {
+    font-family: sfpro-display-black;
+    font-size: 36px;
+    padding-top: 19px;
+}
+
+.white-container .heading2 {
+    font-family: 'sfpro-display-black';
+    font-size: 36px;
+    position: relative;
+    width: 230px;
+    top: 90px;
+    left: 20px;
 }
 
 .postbox {
@@ -131,6 +155,9 @@ body {
 }
 
 .features-postbox .heading {
+    position: relative;
+    top: -4px;
+    left: 29px;
     font-size: 28px;
     font-weight: bold;
     color: rgba(255,255,255,0.81);
@@ -172,4 +199,10 @@ body {
 .appstore-download-tip {
     color: rgba(255,255,255,0.68);
     font-size: 12px;
+}
+
+.iphones {
+    position: relative;
+    margin-top: 95px;
+    margin-left: 12px;
 }
