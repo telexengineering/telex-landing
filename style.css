@@ -36,22 +36,20 @@ body {
     left: 14px;
     top: 14px;
     font-size: 20px;
-    color: white;
+    color: rgba(255,255,255,0.6);
 }
 
 .bi-list {
-    font-size: 38px;
-    color: white;
-    position: absolute;
-    left: 87%;
-    top: 23%;
+    position: relative;
+    left: 77%;
+    top: 10px;
 }
 
 .selected-lang {
     font-family: monospace;
     font-style: normal;
     font-size: 16px;
-    color: white;
+    color: rgba(255,255,255,0.6);
     position: relative;
     left: 4%;
     top: 8px;
