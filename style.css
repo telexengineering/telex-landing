@@ -41,8 +41,58 @@ body {
 
 .bi-list {
     position: relative;
-    left: 77%;
+    left: 74%;
     top: 10px;
+}
+
+#top-lang-menu {
+    display:inline;
+}
+
+.lang-dropdown-list {
+    position: fixed;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    left: 10px;
+    top: 43px;
+    z-index: 2;
+    border-radius: 12px;
+    width:120px;
+    display:none;
+}
+
+.lang-dropdown-list ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.lang-dropdown-list li {
+    border-radius: 5px;
+    width: 90%;
+    padding: 6px;
+}
+
+.lang-dropdown-list a {
+    text-decoration: none;
+    color: black;
+}
+
+.lang-dropdown-list li:active {
+    background-color: gray;
+}
+
+.mobile-navbar {
+    position: fixed;
+    width: 100%;
+    height: 94%;
+    top: 49px;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display:none;
 }
 
 .selected-lang {
@@ -53,6 +103,12 @@ body {
     position: relative;
     left: 4%;
     top: 8px;
+}
+
+.navbar .lang-arrow {
+    position: relative;
+    top: 7px;
+    left: 16px;
 }
 
 #telex-logo {
