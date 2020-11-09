@@ -31,18 +31,26 @@ body {
     -webkit-backdrop-filter: blur(20px);
 }
 
-.bi-globe {
+/* .bi-globe {
     position: relative;
     left: 14px;
     top: 14px;
     font-size: 20px;
     color: rgba(255,255,255,0.6);
+} */
+
+.globe {
+    width: 22px;
+    position: relative;
+    left: 17px;
+    top: 14px;
 }
 
 .bi-list {
     position: relative;
     left: 74%;
     top: 10px;
+    width: 30px;
 }
 
 #top-lang-menu {
@@ -50,12 +58,7 @@ body {
 }
 
 .lang-dropdown-list {
-    position: fixed;
-    background-color: rgba(255,255,255,0.6);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    left: 10px;
-    top: 43px;
+    background-color: rgba(255,255,255,1);
     z-index: 2;
     border-radius: 12px;
     width:120px;
@@ -83,6 +86,18 @@ body {
     background-color: gray;
 }
 
+.nav-lang-dropdown-list {
+    position: absolute;
+    left: 70%;
+    top: 376%;
+}
+
+.footer-lang-dropdown-list {
+    position: fixed;
+    top: 56%;
+    left: 70%;
+}
+
 .mobile-navbar {
     position: fixed;
     width: 100%;
@@ -108,7 +123,8 @@ body {
 .navbar .lang-arrow {
     position: relative;
     top: 7px;
-    left: 16px;
+    left: 19px;
+    width: 12px;
 }
 
 #telex-logo {
@@ -227,7 +243,8 @@ body {
 .apple-icon {
     width: 17px;
     position: relative;
-    top: 1px;
+    top: 2px;
+    left: -1px;
 }
 
 .apple-announce {
@@ -237,7 +254,7 @@ body {
 
 .download-icon {
     width: 18px;
-    height: 18px;
+    /* height: 18px; */
     position: relative;
     top: 2px;
     left: -3px;
@@ -258,14 +275,14 @@ body {
 }
 
 .iphones {
+    width: 100%;
     position: relative;
     margin-top: 95px;
-    margin-left: 12px;
 }
 
 .iphones-rounded {
     position: relative;
-    left: 32px;
+    width: 100%;
     margin-bottom:400px;
 }
 
@@ -281,6 +298,12 @@ body {
     padding-top: 10px;
 }
 
+.breadcrumbs .lang-arrow {
+    position: relative;
+    top: -1px;
+    width: 12px;
+}
+
 .breadcrumbs-hr {
     border-color: rgba(255,255,255,0.3);
     border-width: 1px;
@@ -289,19 +312,21 @@ body {
 }
 
 .telegram-footer-icon {
+    width: 16px;
     margin-right: 5px;
 }
 
-.breadcrumbs-arrow {
-    margin-right: 5px;
+#footer-lang-menu {
+    width: 15%;
+    float: right;
 }
 
 .breadcrumbs-golbe {
     width: 16px;
     height: 16px;
-    margin-left: 240px;
     position: relative;
-    top: 2px;
+    top: 3px;
+    left: 2px;
 }
 
 .breadcrumbs-lang {
@@ -328,6 +353,7 @@ body {
 }
 
 .social-media-icon {
+    width: 24px;
     padding: 0 10px 0 10px;
 }
 
