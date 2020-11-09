@@ -87,15 +87,15 @@ body {
 }
 
 .nav-lang-dropdown-list {
-    position: absolute;
-    left: 70%;
-    top: 376%;
+    position: fixed;
+    left: 10px;
+    top: 43px;
 }
 
 .footer-lang-dropdown-list {
-    position: fixed;
-    top: 56%;
+    position: absolute;
     left: 70%;
+    top: 376%;
 }
 
 .mobile-navbar {
