@@ -19,7 +19,6 @@
 
     $("#footer-lang-menu").click(function(e){
       top_position = 0.89 * $(document).height()
-      console.log(top_position)
       $("#footer-lang-dropdown-list").css('top', top_position + 'px');
       $("#footer-lang-dropdown-list").toggle();
       
@@ -28,8 +27,11 @@
         $("#footer-lang-dropdown-list").hide();
       });
     });
+
+    $("#navbar-toggler").click(function(){
+      $("#mobile-navbar").slideToggle();
+    });
   });
-  // footer-lang-dropdown-list
 </script>
 </head>
 <body>
@@ -40,7 +42,7 @@
       <img src="images/lang-arrow.png" class="lang-arrow">
       <img src="images/telex-logo.png" id="telex-logo">
     </div>
-    <img src="images/navbar-closed.png" class="bi-list">
+    <img src="images/navbar-closed.png" class="navbar-toggler" id="navbar-toggler">
   </nav>
   <nav id="nav-lang-dropdown-list" class="lang-dropdown-list nav-lang-dropdown-list">
     <ul>
@@ -49,7 +51,15 @@
       <a href="https://www.tlx.app/ar"><li>Arabic</li></a>
     </ul>
   </nav>
-  <nav class="mobile-navbar">D</nav>
+  <nav id="mobile-navbar">
+    <ul>
+      <li>What is Telex?</li>
+      <li>Download</li>
+      <li>Features</li>
+      <li>Support</li>
+      <li>FAQ</li>
+    </ul>
+  </nav>
   <main>
     <div class="dark-container">
           <div class="postbox first-postbox dark-postbox-bg centralized-content">
