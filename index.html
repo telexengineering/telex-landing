@@ -18,6 +18,9 @@
     });
 
     $("#footer-lang-menu").click(function(e){
+      var viewportY = window.pageYOffset;
+      dropDownTop = window.pageYOffset + (57/100) * window.innerHeight;
+      $("#footer-lang-dropdown-list").css('top', dropDownTop + 'px');
       $("#footer-lang-dropdown-list").toggle();
       
       e.stopPropagation();
