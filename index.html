@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+  var menu_closed = true;
   $(document).ready(function(){
     $("#top-lang-menu").click(function(e){
       $("#nav-lang-dropdown-list").toggle();
@@ -28,7 +29,8 @@
       });
     });
 
-    $("#navbar-toggler").click(function(){
+    $("#mobile-menu").click(function(){
+      $("#mobile-menu").toggleClass("active");
       $("#mobile-navbar").slideToggle();
     });
   });
@@ -42,7 +44,18 @@
       <img src="images/lang-arrow.png" class="lang-arrow">
       <img src="images/telex-logo.png" id="telex-logo">
     </div>
-    <img src="images/navbar-closed.png" class="navbar-toggler" id="navbar-toggler">
+    <!-- <img src="images/navbar-closed.png" class="navbar-toggler" id="navbar-toggler"> -->
+    <!-- <div id="nav-icon">
+      <div class="menuicon-bread-crust-container" id="bread-crust-container-1">
+        <span class="menuicon-bread-crust menuicon-bread-crust-top"></span>  
+      </div>
+      <div class="menuicon-bread-crust-container" id="bread-crust-container-2">
+        <span class="menuicon-bread-crust menuicon-bread-crust-bottom"></span>  
+      </div>
+    </div>  -->
+    <a id="mobile-menu">
+      <span></span>
+  </a>
   </nav>
   <nav id="nav-lang-dropdown-list" class="lang-dropdown-list nav-lang-dropdown-list">
     <ul>

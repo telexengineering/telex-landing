@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            .square {
+                position: absolute;
+                left: 40px;
+                top: 40px;
+                width: 100px;
+                height: 100px;
+                background-color: lightgray;
+                /* transform: rotate(45deg); */
+                /* animation-delay: 5s; */
+                animation: rotate 5s linear;
+            }
+
+            @keyframes rotate {
+                to {
+                    transform: rotate(45deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class='square'>Square</div>
+    </body>
+</html>

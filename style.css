@@ -365,3 +365,147 @@ body {
     color: rgba(255,255,255,0.6);
     padding: 0 0 15px 0;
 }
+
+/* mobile navbar part */
+#mobile-menu {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    width: 30px;
+    padding: 6px 0 9px 30px; 
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+#mobile-menu span, 
+#mobile-menu span:before, 
+#mobile-menu span:after {
+    height: 1px;
+    width: 30px;
+    background: rgba(255,255,255,0.8);
+    display: block;
+    content: "";
+    position: absolute;
+    right: 50%;
+    margin-right: -15px;
+}
+
+#mobile-menu span {
+    background-color: transparent; /* you can comment this line to have a three line menu */
+    transition: background-color .3s ease .3s;
+    -webkit-transition: background-color .3s ease .3s;
+}
+
+#mobile-menu span:before {
+    top: -6px;
+    transition: top .2s ease .2s, transform .2s ease;
+    -webkit-transition: top .2s ease .2s, -webkit-transform .2s ease;
+}
+
+#mobile-menu span:after {
+    bottom: -6px;
+    transition: bottom .2s ease .2s, transform .2s ease;
+    -webkit-transition: bottom .2s ease .2s, -webkit-transform .2s ease;
+}
+
+#mobile-menu.active span {
+    background-color: transparent;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+}
+
+#mobile-menu.active span:before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: top .2s ease .1s, transform .2s ease .3s;
+    -webkit-transition: top .2s ease .1s, -webkit-transform .2s ease .3s;
+}
+
+#mobile-menu.active span:after {
+    bottom: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    transition: bottom .2s ease .1s, transform .2s ease .3s;
+    -webkit-transition: bottom .2s ease .1s, -webkit-transform .2s ease .3s;
+}
+
+/* 
+@keyframes bread-step-down {
+    to {
+        transform: translateY(+4.9px);
+    }
+}
+
+@keyframes bread-step-up {
+    to {
+        transform: translateY(-4.9px);
+    }
+}
+
+@keyframes bread-rotate-cw {
+    to {
+        transform: rotate(+45deg);
+    }
+}
+
+@keyframes bread-rotate-ccw {
+    to {
+        transform: rotate(-45deg);
+    }
+}
+
+#nav-icon {
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.menuicon-bread-crust {
+    display: block;
+    width: 33%;
+    height: 1%;
+    background: #fff;
+    border-radius: 0.5px;
+    position: absolute;
+    right: 0px;
+}
+
+.menuicon-bread-crust-top {
+    margin: 40% 33% 0 33%;
+    animation: bread-step-down 0.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+.menuicon-bread-crust-bottom {
+    margin: 60% 33% 0 33%;
+    animation: bread-step-up 0.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+.menuicon-bread-crust-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+#bread-crust-container-1 {
+    animation: bread-rotate-cw 0.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    z-index:3;
+}
+
+#bread-crust-container-2 {
+    animation: bread-rotate-ccw 0.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    z-index:4;
+} */

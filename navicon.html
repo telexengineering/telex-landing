@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <style>
+                body {
+                    margin: 20px;
+                }
+
+                #mobile-menu {
+                    display: block;
+                    position: relative;
+                    cursor: pointer;
+                    float: right;
+                    width: 30px;
+                    padding: 6px 0 9px 30px; 
+                    box-sizing: border-box;
+                }
+
+                #mobile-menu span, 
+                #mobile-menu span:before, 
+                #mobile-menu span:after {
+                    height: 3px;
+                    width: 30px;
+                    background: #000;
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    right: 50%;
+                    margin-right: -15px;
+                }
+
+                #mobile-menu span {
+                    background-color: transparent; /* you can comment this line to have a three line menu */
+                    transition: background-color .3s ease .3s;
+                    -webkit-transition: background-color .3s ease .3s;
+                }
+
+                #mobile-menu span:before {
+                    top: -6px;
+                    transition: top .2s ease .2s, transform .2s ease;
+                    -webkit-transition: top .2s ease .2s, -webkit-transform .2s ease;
+                }
+
+                #mobile-menu span:after {
+                    bottom: -6px;
+                    transition: bottom .2s ease .2s, transform .2s ease;
+                    -webkit-transition: bottom .2s ease .2s, -webkit-transform .2s ease;
+                }
+
+                #mobile-menu.active span {
+                    background-color: transparent;
+                    transition: background-color .3s ease;
+                    -webkit-transition: background-color .3s ease;
+                }
+
+                #mobile-menu.active span:before {
+                    top: 0;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    transition: top .2s ease .1s, transform .2s ease .3s;
+                    -webkit-transition: top .2s ease .1s, -webkit-transform .2s ease .3s;
+                }
+
+                #mobile-menu.active span:after {
+                    bottom: 0;
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    transition: bottom .2s ease .1s, transform .2s ease .3s;
+                    -webkit-transition: bottom .2s ease .1s, -webkit-transform .2s ease .3s;
+                }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(function() {
+                $("#mobile-menu").click(function(){
+                    $("#mobile-menu").toggleClass("active");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <a id="mobile-menu">
+            <span></span>
+        </a>
+    </body>
+</html>
