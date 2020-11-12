@@ -372,7 +372,19 @@ body {
     margin: 20px;
 }
 
-#mobile-menu span, 
+/* #mobile-menu span,  */
+
+#mobile-menu span {
+    height: 1px;
+    width: 30px;
+    /* background: rgba(255,255,255,0.8); */
+    display: block;
+    content: "";
+    position: absolute;
+    right: 50%;
+    margin-right: -15px;
+}
+
 #mobile-menu span:before, 
 #mobile-menu span:after {
     height: 1px;
