@@ -441,13 +441,13 @@ body {
     }
 
     100% {
-        -webkit-transform: rotate(-180deg) translateX(190px) rotate(+180deg);
+        -webkit-transform: rotate(-180deg) translateX(180px) rotate(+180deg);
     }
 }
 
 @keyframes move-to-right {
     77%  {margin-left: 0px;}
-    100% {margin-left: 30px;}
+    100% {margin-left: 40px;}
   }
 
 #telex-logo {
