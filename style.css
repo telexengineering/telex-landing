@@ -372,8 +372,6 @@ body {
     margin: 20px;
 }
 
-/* #mobile-menu span,  */
-
 #mobile-menu span {
     height: 1px;
     width: 30px;
@@ -388,7 +386,7 @@ body {
 #mobile-menu span:after {
     height: 1px;
     width: 30px;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,1);
     display: block;
     content: "";
     position: absolute;
