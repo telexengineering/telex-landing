@@ -17,6 +17,7 @@
 body {
     margin: 0px;
     font-family: sfpro-display;
+    overflow-x: hidden;
 }
 
 .navbar {
