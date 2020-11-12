@@ -22,7 +22,7 @@
                     }
 
                     100% {
-                        -webkit-transform: rotate(-315deg) translateX(75px) rotate(+315deg);
+                        -webkit-transform: rotate(-360deg) translateX(75px) rotate(+315deg);
                     }
             }
 
@@ -33,7 +33,7 @@
                 font-weight: bold;
                 display: block;
                 position: fixed;
-                animation: rotate 1s linear infinite;
+                animation: rotate 1s linear forwards;
                 animation-play-state: paused;
                 animation-delay: calc(var(--scroll) * -1s);
             }

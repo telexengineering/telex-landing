@@ -35,6 +35,12 @@
     });
   });
 </script>
+<script>
+  window.addEventListener('scroll', () => {
+      document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+      console.log(window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+  }, false);
+</script>
 </head>
 <body>
   <nav class="navbar">
@@ -44,15 +50,6 @@
       <img src="images/lang-arrow.png" class="lang-arrow">
       <img src="images/telex-logo.png" id="telex-logo">
     </div>
-    <!-- <img src="images/navbar-closed.png" class="navbar-toggler" id="navbar-toggler"> -->
-    <!-- <div id="nav-icon">
-      <div class="menuicon-bread-crust-container" id="bread-crust-container-1">
-        <span class="menuicon-bread-crust menuicon-bread-crust-top"></span>  
-      </div>
-      <div class="menuicon-bread-crust-container" id="bread-crust-container-2">
-        <span class="menuicon-bread-crust menuicon-bread-crust-bottom"></span>  
-      </div>
-    </div>  -->
     <a id="mobile-menu">
       <span></span>
   </a>
