@@ -156,8 +156,8 @@ body {
 }
 
 .postbox {
-    color: white;
-    width: 340px;
+    color: #ffffff;
+    width: 50vh;
     height: 50%;
     padding-top:37px;
     margin: 10% auto 10% auto;
@@ -167,7 +167,7 @@ body {
 
 .first-postbox {
     margin-top: 55px;
-    height: 484px;
+    height: 86vh;
 }
 
 .postbox-large-text {
@@ -183,8 +183,7 @@ body {
 }
 
 .motto-postbox {
-    width: 340px;
-    height: 364px;
+    height: 45vh;
     padding: 0px;
 }
 
@@ -218,8 +217,7 @@ body {
 }
 
 .features-postbox {
-    width: 340px;
-    height: 364px;
+    height: 45vh;
 }
 
 .features-postbox .heading {
@@ -257,7 +255,7 @@ body {
 }
 
 .appstore-download-btn {
-    margin: 164px auto 22px auto;
+    margin: 43vh auto 22px auto;
     background-image: linear-gradient(to right, #8917D8,#3085FF);
     width: 244.13px;
     height: 33px;
@@ -410,16 +408,16 @@ body {
     top: 0;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    transition: top .2s ease .3s, transform .2s ease .3s;
-    -webkit-transition: top .2s ease .3s, -webkit-transform .2s ease .3s;
+    transition: top .2s ease .1s, transform .2s ease .3s;
+    -webkit-transition: top .2s ease .1s, -webkit-transform .2s ease .3s;
 }
 
 #mobile-menu.active span:after {
     bottom: 0;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    transition: bottom .2s ease .3s, transform .2s ease .3s;
-    -webkit-transition: bottom .2s ease .3s, -webkit-transform .2s ease .3s;
+    transition: bottom .2s ease .1s, transform .2s ease .3s;
+    -webkit-transition: bottom .2s ease .1s, -webkit-transform .2s ease .3s;
 }
 /* end of mobile navbar part */
 
