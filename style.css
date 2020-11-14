@@ -54,7 +54,7 @@ body {
     background-color: rgba(255,255,255,1);
     z-index: 2;
     border-radius: 12px;
-    width:120px;
+    width:25vw;
     display:none;
 }
 
@@ -150,14 +150,15 @@ body {
     font-family: 'sfpro-display-black';
     font-size: 36px;
     position: relative;
-    width: 230px;
+    /* width: 230px; */
+    width: 61vw;
     top: 90px;
     left: 20px;
 }
 
 .postbox {
     color: #ffffff;
-    width: 45vh;
+    width: 90vw;
     height: 50%;
     padding-top:37px;
     margin: 10% auto 10% auto;
@@ -256,8 +257,8 @@ body {
 .appstore-download-btn {
     margin: 43vh auto 22px auto;
     background-image: linear-gradient(to right, #8917D8,#3085FF);
-    width: 244.13px;
-    height: 33px;
+    width: 65vw;
+    height: 5vh;
     padding-top: 6px;
     border-radius: 19.5px;
 }
@@ -339,15 +340,15 @@ body {
 }
 
 .social-media-links {
-    width: 172px;
+    width: 46vw;
     position: relative;
     left: 50%;
     top: -21px;
 }
 
 .social-media-icon {
-    width: 20px;
-    padding: 0 10px 0 10px;
+    width: 5vw;
+    padding: 0 2.5vw 0 2.5vw;
 }
 
 .telex-company-name {
@@ -363,7 +364,8 @@ body {
     position: relative;
     cursor: pointer;
     float: right;
-    width: 30px;
+    /* width: 30px; */
+    width: 8vw;
     padding: 6px 0 9px 30px; 
     box-sizing: border-box;
     margin: 20px;
@@ -371,7 +373,8 @@ body {
 
 #mobile-menu span {
     height: 1px;
-    width: 30px;
+    /* width: 30px; */
+    width: 8vw;
     display: block;
     content: "";
     position: absolute;
@@ -383,6 +386,7 @@ body {
 #mobile-menu span:after {
     height: 1px;
     width: 30px;
+    width: 8vw;
     background: rgba(255,255,255,0.8);
     display: block;
     content: "";
@@ -427,15 +431,18 @@ body {
     }
 
     30% {
-        -webkit-transform: rotate(-30deg) translateX(60px) rotate(+30deg);
+        /* -webkit-transform: rotate(-30deg) translateX(60px) rotate(+30deg); */
+        -webkit-transform: rotate(-30deg) translateX(10vw) rotate(+30deg);
     }
 
     50% {
-        -webkit-transform: rotate(-195deg) translateX(260px) rotate(+195deg);
+        /* -webkit-transform: rotate(-30deg) translateX(260px) rotate(+30deg); */
+        -webkit-transform: rotate(-195deg) translateX(60vw) rotate(+195deg);
     }
 
     100% {
-        -webkit-transform: rotate(-180deg) translateX(180px) rotate(+180deg);
+        /* -webkit-transform: rotate(-30deg) translateX(180px) rotate(+30deg); */
+        -webkit-transform: rotate(-180deg) translateX(43vw) rotate(+180deg);
     }
 }
 
