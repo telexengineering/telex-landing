@@ -432,7 +432,7 @@ body {
 
     30% {
         /* -webkit-transform: rotate(-30deg) translateX(60px) rotate(+30deg); */
-        -webkit-transform: rotate(-30deg) translateX(10vw) rotate(+30deg);
+        -webkit-transform: rotate(-30deg) translateX(20vw) rotate(+30deg);
     }
 
     50% {
