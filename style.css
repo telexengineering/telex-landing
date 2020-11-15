@@ -42,7 +42,7 @@ body {
     width: 26vw;
     height: 2vh;
     color: rgba(255,255,255,0.8);
-    padding: 1vh 1vw 1vh 1vw;
+    padding: 0.5vh 1vw 1vh 1vw;
     text-align: center;
     border-radius: 20px;
     position: absolute;
