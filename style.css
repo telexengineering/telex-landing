@@ -34,6 +34,20 @@ body {
     z-index:2;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    overflow:hidden;
+}
+
+.navbar .download-btn {
+    background-image: linear-gradient(to right, #8917D8,#3085FF);
+    width: 26vw;
+    height: 2vh;
+    color: rgba(255,255,255,0.8);
+    padding: 1vh 1vw 1vh 1vw;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    right: 17vw;
+    top: 10vh;
 }
 
 .globe {
@@ -443,7 +457,7 @@ body {
 @keyframes move-to-right {
     77%  {margin-left: 0px;}
     100% {margin-left: 40px;}
-  }
+}
 
 #telex-logo {
     width: 39px;
@@ -468,6 +482,17 @@ body {
     left: 10px;
     top: 43px;
     animation: move-to-right 1s linear forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+
+@keyframes move-up {
+    77%  {top: 10vh;}
+    100% {top: 1.5vh;}
+}
+
+.navbar .download-btn {
+    animation: move-up 1s linear forwards;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);
 }
