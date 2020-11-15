@@ -79,12 +79,6 @@ body {
     background-color: gray;
 }
 
-.nav-lang-dropdown-list {
-    position: fixed;
-    left: 10px;
-    top: 43px;
-}
-
 .footer-lang-dropdown-list {
     position: absolute;
     left: 70%;
@@ -464,6 +458,15 @@ body {
 
 #top-lang-menu {
     display:inline;
+    animation: move-to-right 1s linear forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+
+.nav-lang-dropdown-list {
+    position: fixed;
+    left: 10px;
+    top: 43px;
     animation: move-to-right 1s linear forwards;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);

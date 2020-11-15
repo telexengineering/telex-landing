@@ -38,10 +38,18 @@
   });
 </script>
 <script>
+  var hasFullWindowScrolled = false;
   window.addEventListener('scroll', () => {
-      document.body.style.setProperty('--scroll',Math.min(1, window.pageYOffset / window.innerHeight));
-      // document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-      // console.log(window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+      windowScrollPercentage = Math.min(1, window.pageYOffset / window.innerHeight);
+      if (hasFullWindowScrolled) {
+        windowScrollPercentage = 1;
+      }
+
+      if (windowScrollPercentage == 1) {
+        hasFullWindowScrolled = true;
+      }
+
+      document.body.style.setProperty('--scroll', windowScrollPercentage);
   }, false);
 </script>
 </head>
