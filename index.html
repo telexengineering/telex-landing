@@ -10,22 +10,23 @@
   var menu_closed = true;
   $(document).ready(function(){
     $("#top-lang-menu").click(function(e){
-      $("#nav-lang-dropdown-list").toggle();
+      $("#nav-lang-dropdown-list").fadeToggle();
       
       e.stopPropagation();
       $("body").not("#nav-lang-dropdown-list").click(function(){
-        $("#nav-lang-dropdown-list").hide();
+        $("#nav-lang-dropdown-list").fadeOut();
       });
     });
 
     $("#footer-lang-menu").click(function(e){
       top_position = 0.89 * $(document).height()
       $("#footer-lang-dropdown-list").css('top', top_position + 'px');
-      $("#footer-lang-dropdown-list").toggle();
+      // $("#footer-lang-dropdown-list").toggle();
+      $("#footer-lang-dropdown-list").fadeToggle();
       
       e.stopPropagation();
       $("body").not("#footer-lang-dropdown-list").click(function(){
-        $("#footer-lang-dropdown-list").hide();
+        $("#footer-lang-dropdown-list").fadeOut();
       });
     });
 
