@@ -39,14 +39,15 @@ body {
 
 .navbar .download-btn {
     background-image: linear-gradient(to right, #8917D8,#3085FF);
-    width: 110px;
+    width: 26vw;
+    height: 2vh;
     color: rgba(255,255,255,0.8);
-    padding: 7px;
+    padding: 0.5vh 1vw 1vh 1vw;
     text-align: center;
     border-radius: 20px;
     position: absolute;
-    right: 60px;
-    top: 60px;
+    right: 17vw;
+    top: 10vh;
 }
 
 .globe {
@@ -126,7 +127,7 @@ body {
     font-size: 16px;
     color: rgba(255,255,255,0.6);
     position: relative;
-    left: 19px;
+    left: 4%;
     top: 8px;
 }
 
@@ -143,83 +144,43 @@ body {
     overflow: auto;
 }
 
-.dark-container hr {
-    margin: 5vh 10vw 5vh 10vw;
+.white-container {
+    background-color: #f6f7f7;
 }
 
-.telex-logo-white {
-    width: 22px;
-    height: 18px;
+.white-container .heading1 {
+    font-family: sfpro-display-black;
+    font-size: 36px;
+    padding-top: 19px;
+}
+
+.white-container .heading2 {
+    font-family: 'sfpro-display-black';
+    font-size: 36px;
+    position: relative;
+    /* width: 230px; */
+    width: 61vw;
+    top: 90px;
+    left: 20px;
 }
 
 .postbox {
     color: #ffffff;
     width: 90vw;
     height: 50%;
+    padding-top:37px;
     margin: 10% auto 10% auto;
     border-radius: 20px;
     display:block;
 }
 
-.postbox .telex-heading {
-    font-family: Helvetica;
-    font-size: 24px;
-    font-style: normal;
-    margin-left: 4px;
-}
-
-.postbox .heading2 {
-    font-size:25px;
-}
-
-.postbox .heading2 .colored-motto {
-    color: #9b4563;
-    font-style: normal;
-}
-
-.postbox .desc {
-    margin: 1vh 0 1vh 0;
-}
-
 .first-postbox {
     margin-top: 7vh;
-    padding-top: 3vh;
+    height: 86vh;
 }
 
 .postbox-large-text {
     font-size: 32px;
-}
-
-.postbox .heading3 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 34px;
-}
-
-.postbox .heading4 {
-    text-align: center;
-    font-weight:bold;
-    font-size: 27px;
-}
-
-.postbox .orange-text {
-    font-style: normal;
-    color: #ffad4c;
-}
-
-.postbox .yellow-text {
-    font-style: normal;
-    color: #f8f954;
-}
-
-.feature-screenshot {
-    width: 82.13vw;
-    margin: 2vh auto 2vh auto;
-}
-
-.package-screenshot {
-    width: 80.26vw;
-    margin: 2vh auto 2vh auto;
 }
 
 .dark-postbox-bg {
@@ -411,7 +372,8 @@ body {
     position: relative;
     cursor: pointer;
     float: right;
-    width: 30px;
+    /* width: 30px; */
+    width: 8vw;
     padding: 6px 0 9px 30px; 
     box-sizing: border-box;
     margin: 20px;
@@ -419,7 +381,8 @@ body {
 
 #mobile-menu span {
     height: 1px;
-    width: 30px;
+    /* width: 30px; */
+    width: 8vw;
     display: block;
     content: "";
     position: absolute;
@@ -431,6 +394,7 @@ body {
 #mobile-menu span:after {
     height: 1px;
     width: 30px;
+    width: 8vw;
     background: rgba(255,255,255,0.8);
     display: block;
     content: "";
