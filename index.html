@@ -65,6 +65,11 @@
     document.documentElement.style.setProperty('--x2', planeTranslateX2 + "px");
     //   document.body.style.setProperty('--x3', planeTranslateX3 + "px");
     document.documentElement.style.setProperty('--x3', planeTranslateX3 + "px");
+
+    window.addEventListener("orientationchange", function(event) {
+        // console.log("the orientation of the device is now " + event.target.screen.orientation.angle);
+        alert("orientation changed")
+    });
 </script>
 </head>
 <body>
