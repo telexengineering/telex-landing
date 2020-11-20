@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Move animation with css variables and js</title>
+        <script>
+            //Use the input ranges to modify the individual transform properties on the fly, and see that they can be smooth even if you change a different property mid transition. There's no need to remember what the other properties are when you set the new individual value.
+            //We'll use this to change the CSS Variable values from JS
+            const style = document.documentElement.style;
+
+            /* control elements */
+            var ranges = {
+            translate: document.getElementById('tx'),
+            scale: document.getElementById('scale'),
+            deg: document.getElementById('deg')
+            };
+
+            //Change the CSS Variable value here
+            function valueChange(id, value) {
+            style.setProperty('--' + id, value);
+            }
+
+            /*
+            ranges.translate.addEventListener('input', function(e) { 
+            valueChange(e.currentTarget.id, e.currentTarget.value + 'vw');
+            });
+            */
+
+            ranges.scale.addEventListener('input', function(e) { 
+            valueChange(e.currentTarget.id, e.currentTarget.value);
+            });
+
+            ranges.deg.addEventListener('input', function(e) { 
+            valueChange(e.currentTarget.id, e.currentTarget.value + 'deg');
+            });
+        </script>
+        <style>
+            /*define CSS Variables to be modified by JavaScript*/
+            :root {
+                --tx: 0;
+                --ty: 0;
+                --scale: 1;
+                --deg: 0deg;
+            }
+
+            .mover {
+                /* THIS is the important line */
+                transform: 
+                    translate3d(var(--tx), var(--ty), 0) 
+                    scale(var(--scale)) 
+                    rotate(var(--deg));
+            
+                --hue: 120;
+                --duration: 2000ms;
+                
+                transition: transform var(--duration) linear;
+                will-change: transform;
+                
+                background: hsl(var(--hue), 90%, 52%);
+                width: 15vmin;
+                height: 15vmin;
+                border-radius: 10%;
+            }
+
+            /* Give each block a different color and transition duration */
+            .mover:nth-of-type(2) {
+                --hue: 0;
+                --duration: 3000ms;
+            }
+            .mover:nth-of-type(3) {
+                --hue: 40;
+                --duration: 4000ms;
+            }
+            .mover:nth-of-type(4) {
+                --hue: 200;
+                --duration: 5000ms;
+            }
+
+            /*General styles for structure and controls */
+            body {
+                height: 100vh;
+                overflow: hidden;
+                background: hsl(220, 12%, 16%);
+            }
+
+            #controls {
+                position: absolute;
+                right: 1rem;
+                bottom: 50%;
+                transform: translateY(50%);
+                display: flex;
+                flex-direction: column;
+            }
+
+            @media screen and (orientation: portrait) {
+                #controls {
+                    right: 50%;
+                    bottom: 0;
+                    transform: translateX(50%);
+                }
+            }
+
+            input {
+                width: 12rem;
+                margin-bottom: 1rem;
+            }
+
+            label {
+                display: flex;
+                justify-content: space-between;
+                color: white;
+                font-size: .85rem;
+                font-family: system-ui, -apple-system, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+
+        <div id="controls">
+        <label for="tx"><span>0 </span>translateX<span>80</span></label>
+        <input type="range" id="tx" min="0" max="80" value="0" />
+        <label for="scale"><span>0</span>scale<span>2</span></label>
+        <input type="range" id="scale" min="0" max="2" step=".05" value="1"/>
+        <label for="deg"><span>-360</span>rotate<span>360</span></label>
+        <input type="range" id="deg" min="-360" max="360" value="0"/>
+        </div>
+    </body>
+</html>

@@ -477,19 +477,19 @@ body {
     30% {
         /* -webkit-transform: rotate(-30deg) translateX(60px) rotate(+30deg); */
         /* -webkit-transform: rotate(-30deg) translateX(20vw) rotate(+30deg); */
-        -webkit-transform: rotate(-30deg) translateX(var(--plane-translate-x1)) rotate(+30deg);
+        -webkit-transform: rotate(-30deg) translateX(var(--x1)) rotate(+30deg);
     }
 
     50% {
         /* -webkit-transform: rotate(-30deg) translateX(260px) rotate(+30deg); */
         /* -webkit-transform: rotate(-195deg) translateX(60vw) rotate(+195deg); */
-        -webkit-transform: rotate(-195deg) translateX(var(--plane-translate-x2)) rotate(+195deg);
+        -webkit-transform: rotate(-195deg) translateX(var(--x2)) rotate(+195deg);
     }
 
     100% {
         /* -webkit-transform: rotate(-30deg) translateX(180px) rotate(+30deg); */
         /* -webkit-transform: rotate(-180deg) translateX(43vw) rotate(+180deg); */
-        -webkit-transform: rotate(-180deg) translateX(var(--plane-translate-x3)) rotate(+180deg);
+        -webkit-transform: rotate(-180deg) translateX(var(--x3)) rotate(+180deg);
     }
 }
 
