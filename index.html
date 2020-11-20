@@ -49,7 +49,15 @@
         hasFullWindowScrolled = true;
       }
 
+      planeTranslateX1 = 0.2 * window.innerWidth
+      planeTranslateX2 = 0.6 * window.innerWidth
+      planeTranslateX3 = 0.43 * window.innerWidth
+
       document.body.style.setProperty('--scroll', windowScrollPercentage);
+      document.body.style.setProperty('--plane-translate-x1', planeTranslateX1 + "px");
+      document.body.style.setProperty('--plane-translate-x2', planeTranslateX2 + "px");
+      document.body.style.setProperty('--plane-translate-x3', planeTranslateX3 + "px");
+
     //   alert("Window_inner_width:" + window.innerWidth + ", window_inner_height:" + window.innerHeight)
   }, false);
 </script>
