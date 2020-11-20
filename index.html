@@ -67,8 +67,15 @@
     document.documentElement.style.setProperty('--x3', planeTranslateX3 + "px");
 
     window.addEventListener("orientationchange", function(event) {
-        // console.log("the orientation of the device is now " + event.target.screen.orientation.angle);
-        alert("orientation changed")
+        planeTranslateX1 = 0.2 * window.innerWidth
+        planeTranslateX2 = 0.6 * window.innerWidth
+        planeTranslateX3 = 0.43 * window.innerWidth
+        //   document.body.style.setProperty('--x1', planeTranslateX1 + "px");
+        document.documentElement.style.setProperty('--x1', planeTranslateX1 + "px");
+        //   document.body.style.setProperty('--x2', planeTranslateX2 + "px");
+        document.documentElement.style.setProperty('--x2', planeTranslateX2 + "px");
+        //   document.body.style.setProperty('--x3', planeTranslateX3 + "px");
+        document.documentElement.style.setProperty('--x3', planeTranslateX3 + "px");
     });
 </script>
 </head>
