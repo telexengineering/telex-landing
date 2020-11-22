@@ -212,6 +212,40 @@ body {
     color: #f8f954;
 }
 
+.slidable-list {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.slidable-list li {
+    font-size: 20px;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.8);
+    border-width: 0 0 1px 0;
+    padding: 3px;
+}
+
+.slidable-list-item-toggler {
+    width: 16px;
+    position: relative;
+    top: 3px;
+    float: right;
+}
+
+.slidable-list-item-toggler.active {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: top .1s ease .2s, transform .2s ease .1s;
+    -webkit-transition: top .1s ease .2s, -webkit-transform .2s ease .1s;
+}
+
+.slide-second-row {
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    padding: 10px 0 10px 0;
+    display: none;
+}
+
 .feature-screenshot {
     width: 82.13vw;
     margin: 2vh auto 2vh auto;
