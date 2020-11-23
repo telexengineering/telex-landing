@@ -220,9 +220,24 @@ body {
 .slidable-list li {
     font-size: 20px;
     border-style: solid;
-    border-color: rgba(255,255,255,0.8);
+    border-color: rgba(255,255,255,0.2);
     border-width: 0 0 1px 0;
-    padding: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tips-toggler-li:hover {
+    color: #2997ff;
+    cursor: pointer;
+}
+
+.slide-second-row a:link, .slide-second-row a:visited {
+    color: #2997ff;
+    text-decoration: none;
+}
+
+.slide-second-row a:hover {
+    text-decoration: underline;
 }
 
 .slidable-list-item-toggler {

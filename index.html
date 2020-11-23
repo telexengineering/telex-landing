@@ -36,10 +36,11 @@
       $("body").toggleClass("navbar-open");
     });
     
-    $(".tips-toggler-btn,.tips-toggler-title").click(function(){
+    $(".tips-toggler-li").click(function(){
         elemId = $(this).attr('id');
         splittedElemId = elemId.split('-');
         id = splittedElemId[splittedElemId.length - 1];
+        console.log(id)
         contentHolderElemId = "tips-content-" + id;
         $("#" + contentHolderElemId).slideToggle();
         $("#tips-toggler-btn-" + id).children().toggleClass("active");
@@ -133,31 +134,57 @@
               </div>
               <ul class="slidable-list">
                   <li>
-                    <div class="slide-first-row">
-                      <a class="tips-toggler-title" id="tips-toggler-title-1">What is Telex?</a>
-                        <a class="tips-toggler-btn" id="tips-toggler-btn-1"><img src="images/round-add-button.svg" class="slidable-list-item-toggler"></a>
+                    <div class="slide-first-row tips-toggler-li" id="tips-toggler-li-1">
+                      What is Telex?
+                        <a class="tips-toggler-btn" id="tips-toggler-btn-1">
+                          <svg class="slidable-list-item-toggler" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                          </svg>
+                        </a>
                     </div>
                     <div class="slide-second-row" id="tips-content-1">
                       <b>Telex</b> is an instant messenger built with Telegram APIs with a focus on expanding the boundaries of what you can do with a high-tech and open-source messenger originally designed for the mass market. Telex is designed for people who already use Telegram as their primary communication tool and seek a secure, feature-rich, and advanced messenger app. We are starving to create an amazing user experience and make a package of the most useful and popular features from all of the world's top-notch messaging app.
                     </div>
                   </li>
                   <li>
-                    <a class="tips-toggler-title" id="tips-toggler-title-2">Who is Telex for?</a>
-                    <a class="tips-toggler-btn" id="tips-toggler-btn-2"><img src="images/round-add-button.svg" class="slidable-list-item-toggler"></a>
+                    <div class="slide-first-row tips-toggler-li" id="tips-toggler-li-2">
+                      Who is Telex for?
+                      <a class="tips-toggler-btn" id="tips-toggler-btn-2">
+                        <svg class="slidable-list-item-toggler" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                      </a>
+                    </div>
                     <div class="slide-second-row" id="tips-content-2">
                       Telex is for everyone, especially those who use Telegram as their main communication tool while they have noticed some deficiencies in it so that it couldn't satisfy all their needs; also, some people are using Telegram for professional and advanced purposes. To this end, we have taken some steps to increase productivity and efficiency and meet all kinds of people's needs.
                     </div>
                   </li>
                   <li>
-                    <a class="tips-toggler-title" id="tips-toggler-title-3">How is it different from Telegram?</a>
-                    <a class="tips-toggler-btn" id="tips-toggler-btn-3"><img src="images/round-add-button.svg" class="slidable-list-item-toggler"></a>
+                    <div class="slide-first-row tips-toggler-li" id="tips-toggler-li-3">
+                      How is it different from Telegram?
+                      <a class="tips-toggler-btn" id="tips-toggler-btn-3">
+                        <svg class="slidable-list-item-toggler" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                      </a>
+                    </div>
                     <div class="slide-second-row" id="tips-content-3">
                       In <b>Telex</b>, we upgrade the free and open-source Telegram ecosystem to support not only the features you can see on a normal Telegram app but also more features you probably wish Telegram would have to make Telegram even better. In other words, we want to make Telex as an all power in one messaging application. Besides, You can decide and vote for your favorite features. We always welcome contributions, even in the product source code. It's open, and you can help us make a great alternative client with better user experience and professional features. Bring your ideas, and we will turn them into reality.
                     </div>
                   </li>
                   <li>
-                    <a class="tips-toggler-title" id="tips-toggler-title-4">How can I become a Telex member?</a>
-                    <a class="tips-toggler-btn" id="tips-toggler-btn-4"><img src="images/round-add-button.svg" class="slidable-list-item-toggler"></a>
+                    <div class="slide-first-row tips-toggler-li" id="tips-toggler-li-4">
+                      How can I become a Telex member?
+                      <a class="tips-toggler-btn" id="tips-toggler-btn-4">
+                        <svg class="slidable-list-item-toggler" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                      </a>
+                    </div>
                     <div class="slide-second-row" id="tips-content-4">
                       if you want to register in Telex, please follow these instructions:
 
@@ -167,37 +194,72 @@
                     </div>
                   </li>
                   <li>
-                    <a class="tips-toggler-title" id="tips-toggler-title-5">Is it available on my device?</a>
-                    <a class="tips-toggler-btn" id="tips-toggler-btn-5"><img src="images/round-add-button.svg" class="slidable-list-item-toggler"></a>
+                    <div class="slide-first-row tips-toggler-li" id="tips-toggler-li-5">
+                      Is it available on my device?
+                      <a class="tips-toggler-btn" id="tips-toggler-btn-5">
+                        <svg class="slidable-list-item-toggler" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                      </a>
+                    </div>
                     <div class="slide-second-row" id="tips-content-5">
                       At this time, you can use Telex across your Apple devices, including iPhone and iPod touch with <a href="https://tlx.app/dl">iOS</a> 9.0 or later, iPad with iPadOS 13 or later. Shortly, You can use Telex on all of your smartphones, tablets, and even computers.
                     </div>
                   </li>
                   <li>
-                    <a class="tips-toggler-title" id="tips-toggler-title-6">Who can I write to?</a>
-                    <a class="tips-toggler-btn" id="tips-toggler-btn-6"><img src="images/round-add-button.svg" class="slidable-list-item-toggler"></a>
+                    <div class="slide-first-row tips-toggler-li" id="tips-toggler-li-6">
+                      Who can I write to?
+                      <a class="tips-toggler-btn" id="tips-toggler-btn-6">
+                        <svg class="slidable-list-item-toggler" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                      </a>
+                    </div>
                     <div class="slide-second-row" id="tips-content-6">
                       You can write to people who are in your phone contacts and have Telegram. Another way of contacting people is to type their Telegram <a href="https://telegram.org/faq#usernames-and-t-me">username</a> into the search field.
                     </div>
                   </li>
                   <li>
-                    <a class="tips-toggler-title" id="tips-toggler-title-7">How do I invite my friends?</a>
-                    <a class="tips-toggler-btn" id="tips-toggler-btn-7"><img src="images/round-add-button.svg" class="slidable-list-item-toggler"></a>
+                    <div class="slide-first-row tips-toggler-li" id="tips-toggler-li-7">
+                      How do I invite my friends?
+                      <a class="tips-toggler-btn" id="tips-toggler-btn-7">
+                        <svg class="slidable-list-item-toggler" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                      </a>
+                    </div>
                     <div class="slide-second-row" id="tips-content-7">
                       <b><i>iOS:</i></b> The basic invitations are simple SMS messages. They will be charged as standard outgoing SMS by your carrier (unless sent via iMessage). Naturally, you have other options to bring your friends here. Try sending them a download link via any other messaging service: email, Facebook, WhatsApp, Telegram etc. The link: <b>https://tlx.app/dl</b>
                     </div>
                   </li>
                   <li>
-                    <a class="tips-toggler-title" id="tips-toggler-title-8">How secure is Telex?</a>
-                    <a class="tips-toggler-btn" id="tips-toggler-btn-8"><img src="images/round-add-button.svg" class="slidable-list-item-toggler"></a>
+                    <div class="slide-first-row tips-toggler-li" id="tips-toggler-li-8">
+                      How secure is Telex?
+                      <a class="tips-toggler-btn" id="tips-toggler-btn-8">
+                        <svg class="slidable-list-item-toggler" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                      </a>
+                    </div>
                     <div class="slide-second-row" id="tips-content-8">
                       Telegram's <a href="https://core.telegram.org/mtproto">protocol</a>, <a href="https://core.telegram.org/api">API</a>, and even <a href="https://telegram.org/apps#source-code">source code</a> is open, and they welcome developers to create their own Telegram apps. Meanwhile, Telex is built with Telegram API, and we use Telegram servers for any services provided by Telex. So, all of your private information, including conversations, media, etc., are maintained on Telegram servers, and we don't have any access to them.
 For more information about Telegram's high security, visit <a href="https://telegram.org/faq#security">here</a>.
                     </div>
                   </li>
                   <li>
-                    <a class="tips-toggler-title" id="tips-toggler-title-9">Why should I trust Telex?</a>
-                    <a class="tips-toggler-btn" id="tips-toggler-btn-9"><img src="images/round-add-button.svg" class="slidable-list-item-toggler"></a>
+                    <div class="slide-first-row tips-toggler-li" id="tips-toggler-li-9">
+                      Why should I trust Telex?
+                      <a class="tips-toggler-btn" id="tips-toggler-btn-9">
+                        <svg class="slidable-list-item-toggler" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                      </a>
+                    </div>
                     <div class="slide-second-row" id="tips-content-9">
                       Telex is open, anyone can check our source code see how everything works and make an informed decision. Telex supports <a href="https://core.telegram.org/reproducible-builds#reproducible-builds-for-ios">verifiable</a> builds, which allow experts to independently verify that our code published on GitHub is the exact same code that is used to build the apps you download from App Store or Google Play.
                     </div>
