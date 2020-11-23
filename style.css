@@ -138,7 +138,7 @@ body {
 }
 
 .dark-container {
-    background-color: #0E0F1D;
+    background-color: #000000;
     z-index:0;
     overflow: auto;
 }
@@ -230,6 +230,8 @@ body {
     position: relative;
     top: 3px;
     float: right;
+    transition: top .1s ease .2s, transform .2s ease .1s;
+    -webkit-transition: top .1s ease .2s, -webkit-transform .2s ease .1s;
 }
 
 .slidable-list-item-toggler.active {
@@ -362,9 +364,17 @@ body {
 }
 
 .landing-footer {
-    background-image: linear-gradient(to right, #23A0DD,#671BFF);
+    background-color: #1d1d1f;
     color: rgba(255,255,255,0.9);
-    /* height: 354px; */
+}
+
+.footer-download-container {
+    text-align: center;
+}
+.footer-appstore-download-btn {
+    margin: 6% 0 6% 0;
+    width: 161px;
+    height: 54px;
 }
 
 .breadcrumbs {
@@ -421,22 +431,33 @@ body {
 }
 
 .social-media-links {
-    width: 46vw;
-    position: relative;
-    left: 50%;
-    top: -21px;
+    text-align: center;
+    margin-bottom: 5%;
 }
 
 .social-media-icon {
-    width: 5vw;
-    padding: 0 2.5vw 0 2.5vw;
+    height: 41px;
+    padding: 0 5% 0 5%;
 }
 
-.telex-company-name {
+.footer-endnote {
     text-align: center;
     font-size: 13px;
     color: rgba(255,255,255,0.6);
-    padding: 0 0 15px 0;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.footer-links {
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    padding-bottom: 15px;
+}
+
+.tips-toggler-endnote {
+    font-size: 17px;
+    font-weight: bold;
 }
 
 /* start of mobile navbar part */
