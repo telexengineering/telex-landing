@@ -6,63 +6,10 @@
 <meta content="width=device-width, initial-scale=1" name="viewport" />
 <link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-  var menu_closed = true;
-  $(document).ready(function(){
-    $("#top-lang-menu").click(function(e){
-      $("#nav-lang-dropdown-list").fadeToggle();
-      
-      e.stopPropagation();
-      $("body").not("#nav-lang-dropdown-list").click(function(){
-        $("#nav-lang-dropdown-list").fadeOut();
-      });
-    });
-
-    $("#footer-lang-menu").click(function(e){
-      top_position = 0.89 * $(document).height()
-      $("#footer-lang-dropdown-list").css('top', top_position + 'px');
-      // $("#footer-lang-dropdown-list").toggle();
-      $("#footer-lang-dropdown-list").fadeToggle();
-      
-      e.stopPropagation();
-      $("body").not("#footer-lang-dropdown-list").click(function(){
-        $("#footer-lang-dropdown-list").fadeOut();
-      });
-    });
-
-    $("#mobile-menu").click(function(){
-      $("#mobile-menu").toggleClass("active");
-      $("#mobile-navbar").slideToggle();
-      $("body").toggleClass("navbar-open");
-    });
-    
-    $(".tips-toggler-li").click(function(){
-        elemId = $(this).attr('id');
-        splittedElemId = elemId.split('-');
-        id = splittedElemId[splittedElemId.length - 1];
-        console.log(id)
-        contentHolderElemId = "tips-content-" + id;
-        $("#" + contentHolderElemId).slideToggle();
-        $("#tips-toggler-btn-" + id).children().toggleClass("active");
-    });
-
-  });
-</script>
-<script>
-  var hasFullWindowScrolled = false;
-  window.addEventListener('scroll', () => {
-      windowScrollPercentage = Math.min(1, window.pageYOffset / window.innerHeight);
-      if (hasFullWindowScrolled) {
-        windowScrollPercentage = 1;
-      }
-
-      if (windowScrollPercentage == 1) {
-        hasFullWindowScrolled = true;
-      }
-
-    document.documentElement.style.setProperty('--scroll', windowScrollPercentage);
-  }, false);
-</script>
+<script src="scripts/top-lang-menu.js"></script>
+<script src="scripts/mobile-menu.js"></script>
+<script src="scripts/tips-toggler.js"></script>
+<script src="scripts/scroll-to-animation-binder.js"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -97,10 +44,10 @@
     <div class="dark-container">
           <div class="postbox first-postbox">
             <img src="images/telex-logo-white.png" class="telex-logo-white">
-            <i class="telex-heading">Application</i>
+            <i class="telex-heading">Telex</i>
             <div class="heading2">
                 Even <b>Better</b><br>
-                <i class="colored-motto">Application</i>
+                <i class="colored-motto">Telegram Client</i>
             </div>
             <span class="desc">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -108,7 +55,7 @@
           </div>
           <hr>
           <div class="postbox centralized-content">
-              <i class="heading3">Why This application?<i class="orange-text">?</i></i>
+              <i class="heading3">Why Telex<i class="orange-text">?</i></i>
               <img src="images/screenshot-private.png" class="feature-screenshot">
               <img src="images/screenshot-creative.png" class="feature-screenshot">
               <img src="images/screenshot-secure.png" class="feature-screenshot">

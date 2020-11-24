@@ -21,6 +21,7 @@ body {
     background-color: #000000;
 }
 
+/** Start of navbar **/
 .navbar-open {
     overflow-y: hidden;
 }
@@ -137,7 +138,9 @@ body {
     left: 19px;
     width: 12px;
 }
+/** End of navbar **/
 
+/** start of body containers **/
 .dark-container {
     background-color: #000000;
     z-index:0;
@@ -146,11 +149,6 @@ body {
 
 .dark-container hr {
     margin: 5vh 10vw 5vh 10vw;
-}
-
-.telex-logo-white {
-    width: 22px;
-    height: 18px;
 }
 
 .postbox {
@@ -212,7 +210,14 @@ body {
     font-style: normal;
     color: #f8f954;
 }
+/** end of body containers **/
 
+.telex-logo-white {
+    width: 22px;
+    height: 18px;
+}
+
+/** start of slidable tips **/
 .slidable-list {
     list-style-type: none;
     padding-inline-start: 0;
@@ -232,6 +237,13 @@ body {
 .tips-toggler-li:hover {
     color: #2997ff;
     cursor: pointer;
+}
+
+.slide-second-row {
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    padding: 10px 0 10px 0;
+    display: none;
 }
 
 .slide-second-row a:link, .slide-second-row a:visited {
@@ -259,12 +271,11 @@ body {
     -webkit-transition: top .1s ease .2s, -webkit-transform .2s ease .1s;
 }
 
-.slide-second-row {
-    font-size: 18px;
-    color: rgba(255,255,255,0.7);
-    padding: 10px 0 10px 0;
-    display: none;
+.tips-toggler-endnote {
+    font-size: 17px;
+    font-weight: bold;
 }
+/** end of slidable tips **/
 
 .feature-screenshot {
     width: 82.13vw;
@@ -276,39 +287,6 @@ body {
     margin: 2vh auto 2vh auto;
 }
 
-.dark-postbox-bg {
-    background-image: linear-gradient(to bottom, #202430, #171717);
-}
-
-.red-postbox-bg {
-    background-image: linear-gradient(to bottom, #C43030, #E15454);
-}
-
-.motto-postbox {
-    height: 45vh;
-    padding: 0px;
-}
-
-.first-motto {
-    font-weight: bold;
-    font-size: 28px;
-    color: rgba(255,255,255,0.81);
-    position: relative;
-    left: 20px;
-    top: 20px;
-}
-
-.second-motto {
-    width: 100%;
-    height: 76px;
-    font-size: 32px;
-    font-weight: bold;
-    position: relative;
-    padding: 0px;
-    top: 101px;
-    color: rgba(235,232,250,0.91);
-}
-
 .yellow-text {
     color: rgba(255,230,1,0.91);
 }
@@ -317,70 +295,7 @@ body {
     text-align:center;
 }
 
-.features-postbox {
-    height: 45vh;
-}
-
-.features-postbox .heading {
-    position: relative;
-    top: -4px;
-    padding-left: 10%;
-    font-size: 28px;
-    font-weight: bold;
-    color: rgba(255,255,255,0.81);
-}
-
-.telegram-logo {
-    width: 49.42px;
-    margin-top: 15px;
-}
-
-.apple-icon {
-    width: 17px;
-    position: relative;
-    top: 2px;
-    left: -1px;
-}
-
-.apple-announce {
-    margin-top: 15px;
-    font-size: 17px;
-}
-
-.download-icon {
-    width: 18px;
-    /* height: 18px; */
-    position: relative;
-    top: 2px;
-    left: -3px;
-}
-
-.appstore-download-btn {
-    margin: 43vh auto 22px auto;
-    background-image: linear-gradient(to right, #8917D8,#3085FF);
-    width: 65vw;
-    height: 5vh;
-    padding-top: 6px;
-    border-radius: 19.5px;
-}
-
-.appstore-download-tip {
-    color: rgba(255,255,255,0.68);
-    font-size: 12px;
-}
-
-.iphones {
-    width: 100%;
-    position: relative;
-    margin-top: 95px;
-}
-
-.iphones-rounded {
-    position: relative;
-    width: 100%;
-    margin-bottom:400px;
-}
-
+/** start of footer part **/
 .landing-footer {
     background-color: #1d1d1f;
     color: rgba(255,255,255,0.9);
@@ -389,63 +304,11 @@ body {
 .footer-download-container {
     text-align: center;
 }
+
 .footer-appstore-download-btn {
     margin: 6% 0 6% 0;
     width: 161px;
     height: 54px;
-}
-
-.breadcrumbs {
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 10px;
-}
-
-.breadcrumbs .lang-arrow {
-    position: relative;
-    top: -1px;
-    width: 12px;
-}
-
-.breadcrumbs-hr {
-    border-color: rgba(255,255,255,0.3);
-    border-width: 1px;
-    position: relative;
-    top: -5px;
-}
-
-.telegram-footer-icon {
-    width: 16px;
-    margin-right: 5px;
-}
-
-#footer-lang-menu {
-    width: 15%;
-    float: right;
-}
-
-.breadcrumbs-golbe {
-    width: 16px;
-    height: 16px;
-    position: relative;
-    top: 3px;
-    left: 2px;
-}
-
-.breadcrumbs-lang {
-    font-style: normal;
-    font-size: 13px;
-    padding-left: 2px;
-}
-
-.footer-links {
-    list-style-type: none;
-    padding-left: 30px;
-    margin: 0px;
-}
-
-.footer-links li {
-    padding-top: 17px;
 }
 
 .social-media-links {
@@ -472,11 +335,7 @@ body {
     color: rgba(255,255,255,0.4);
     padding-bottom: 15px;
 }
-
-.tips-toggler-endnote {
-    font-size: 17px;
-    font-weight: bold;
-}
+/** end of footer part **/
 
 /* start of mobile navbar part */
 #mobile-menu {
@@ -542,26 +401,6 @@ body {
 /* end of mobile navbar part */
 
 /* start of plane animation */
-/*
-@keyframes rotate {
-    0% {
-        -webkit-transform: rotate(+0deg) translateX(0px) rotate(-0deg);
-    }
-
-    30% {
-        -webkit-transform: rotate(-30deg) translateX(20vw) rotate(+30deg);
-    }
-
-    50% {
-        -webkit-transform: rotate(-195deg) translateX(60vw) rotate(+195deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(-180deg) translateX(43vw) rotate(+180deg);
-    }
-}
-*/
-
 @keyframes rotate {
     0% {
         -webkit-transform: rotate(+0deg) translateX(0px) rotate(-0deg);
