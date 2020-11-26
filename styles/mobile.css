@@ -176,7 +176,13 @@
         font-size:25px;
     }
     
+    .postbox .heading2 .normal {
+        font-style: normal;
+    }
+
     .postbox .heading2 .colored-motto {
+        clear: left;
+        display: block;
         color: #9b4563;
         font-style: normal;
     }
@@ -188,6 +194,10 @@
     .first-postbox {
         margin-top: 7vh;
         padding-top: 3vh;
+    }
+
+    .first-postbox .download-btn {
+        display: none;
     }
     
     .postbox-large-text {
