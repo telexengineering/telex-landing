@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
     @font-face {
         font-family: sfpro-display;
         src: url('../fonts/sfpro-display.ttf');
@@ -194,6 +194,10 @@
     .first-postbox {
         margin-top: 7vh;
         padding-top: 3vh;
+    }
+
+    .first-postbox .image-part {
+        display: none;
     }
 
     .first-postbox .download-btn {

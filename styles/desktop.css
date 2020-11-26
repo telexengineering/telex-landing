@@ -1,4 +1,4 @@
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
     @font-face {
         font-family: sfpro-display;
         src: url('../fonts/sfpro-display.ttf');
@@ -183,7 +183,13 @@
     }
     
     .dark-container hr {
-        margin: 5vh 10vw 5vh 10vw;
+        margin: 5vh 2vw 5vh 2vw;
+        border-top-width: 0px;
+        border-bottom-width: 1px;
+        border-color: rgba(255,255,255,0.8);
+        clear: left;
+        position: relative;
+        top: 42px;
     }
     
     .postbox {
@@ -202,6 +208,22 @@
         margin-left: 4px;
     }
     
+    .first-postbox .text-part {
+        margin-top: 3%;
+        width: calc(100% - 270px);
+    }
+
+    .first-postbox .image-part {
+        position: absolute;
+        top: 14%;
+        right: 5%;
+        width: 270px;
+    }
+
+    .first-postbox .sample-heading-iphone {
+        width: 270px;
+    }
+
     .first-postbox .heading1 {
         text-align: center;
     }
@@ -217,12 +239,11 @@
     }
 
     .postbox .heading2 .colored-motto {
-        color: #9b4563;
+        color: #29AAED;
         font-style: normal;
     }
     
     .postbox .desc {
-        text-align: center;
         margin: 1vh 0 1vh 0;
     }
     
@@ -259,6 +280,21 @@
     .postbox .heading4 {
         text-align: center;
         font-weight:bold;
+        font-size: 27px;
+    }
+
+    .postbox .emoji-container {
+        width: 33.33%;
+        display: block;
+        float: left;
+    }
+
+    .postbox .animated-emoji {
+        width: 100%;
+    }
+
+    .postbox .emoji-title {
+        font-family: sfpro-display;
         font-size: 27px;
     }
     
@@ -339,9 +375,32 @@
     }
     /** end of slidable tips **/
     
-    .feature-screenshot {
-        width: 30%;
+    .feature-screenshot-container {
+        width: 288px;
+        height: 366.53px;
+        display: block;
+        float: left;
         margin: 1vh;
+        position: relative;
+    }
+
+    .feature-screenshot-backblur {
+        width: 288px;
+        height: 366.53px;
+        background-image: linear-gradient(to right, #0088FF,#FF5C87);
+        backdrop-filter: blur(47px);
+        z-index: 1;
+        opacity: 0.7;
+        filter: blur(47px);
+    }
+
+    .feature-screenshot {
+        width: 288px;
+        height: 366.53px;
+        z-index:2;
+        position: absolute;
+        top: 0px;
+        left: 0px;
     }
     
     .package-screenshot {
