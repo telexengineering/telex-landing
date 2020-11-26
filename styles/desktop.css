@@ -394,7 +394,7 @@
         font-weight: bold;
         position: relative;
         top: 14vh;
-        left: 11.5%;
+        padding-left: 11.5%;
     }
     
     .footer-links {
@@ -402,7 +402,7 @@
         color: rgba(255,255,255,0.4);
         padding-bottom: 15px;
         position: relative;
-        left: 11.5%;
+        padding-left: 11.5%;
         top: 14vh;    
     }
     /** end of footer part **/
