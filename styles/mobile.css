@@ -34,7 +34,7 @@
         top: 0px;
         left: 0px;
         background: rgba(0,0,0,0.7);
-        z-index:2;
+        z-index: 3;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         overflow:hidden;
@@ -218,6 +218,19 @@
         text-align: center;
         font-weight:bold;
         font-size: 27px;
+    }
+
+    .postbox .emoji-container {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .lottie-player {
+        width: 300px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .postbox .orange-text {
