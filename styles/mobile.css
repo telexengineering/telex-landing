@@ -72,7 +72,7 @@
     
     .lang-dropdown-list {
         background-color: rgba(255,255,255,1);
-        z-index: 2;
+        z-index: 3;
         border-radius: 12px;
         width:25vw;
         display:none;
@@ -235,7 +235,7 @@
     
     .postbox .orange-text {
         font-style: normal;
-        color: #ffad4c;
+        color: #ece3b6;
     }
     
     .postbox .yellow-text {
@@ -267,7 +267,7 @@
     }
     
     .tips-toggler-li:hover {
-        color: #2997ff;
+        color: #29AAED;
         cursor: pointer;
     }
     
@@ -279,7 +279,7 @@
     }
     
     .slide-second-row a:link, .slide-second-row a:visited {
-        color: #2997ff;
+        color: #29AAED;
         text-decoration: none;
     }
     
