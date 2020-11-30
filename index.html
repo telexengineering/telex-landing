@@ -314,6 +314,27 @@ For more information about Telegram's high security, visit <a href="https://tele
   <script src="js/tgsticker.js"></script>
   <script src="js/main.js?2"></script>
   <script>
+      
+      // check FPS
+      const times = [];
+      let fps;
+
+      function refreshLoop() {
+        window.requestAnimationFrame(() => {
+          const now = performance.now();
+          while (times.length > 0 && times[0] <= now - 1000) {
+            times.shift();
+          }
+          times.push(now);
+          fps = times.length;
+          console.log(fps);
+          alert(fps);
+          refreshLoop();
+        });
+      }
+
+      refreshLoop();
+      //
       mainInitTgStickers();
   </script>
 </body>
