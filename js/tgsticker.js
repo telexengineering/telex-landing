@@ -338,18 +338,13 @@ var RLottie = (function () {
     }
   
     rlottie.init = function(el, options) {
-      console.log("HINJA1")
       if (!rlottie.isSupported) {
-        console.log("HINJA2")
         return false;
       }
-      console.log("HINJA3")
 
       initApi(function() {
-        console.log("HINJA4")
         initPlayer(el, options);
       });
-      console.log("HINJA5")
     }
   
     rlottie.destroy = function(el) {

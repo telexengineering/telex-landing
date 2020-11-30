@@ -1,22 +1,16 @@
 function mainInitTgStickers(options) {
   options = options || {};
   if (!RLottie.isSupported) {
-    console.log("INJA1");
     if (options.unsupportedURL) {
-      console.log("INJA2");
       if (!getCookie('stel_notgs')) {
-        console.log("INJA3");
         setCookie('stel_notgs', 1, 7);
       }
-      console.log("INJA4");
       location = options.unsupportedURL;
     }
-    console.log("INJA5");
     return false;
   }
-  console.log("INJA6");
+  
   document.querySelectorAll('.js-tgsticker_image').forEach(function (imgEl) {
-    console.log("INJA7");
     RLottie.init(imgEl, options);
   });
 }
