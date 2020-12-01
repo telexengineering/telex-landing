@@ -499,4 +499,17 @@
         top: 43px;
     }
     /* end of plane animation */
+
+    /* HEEEY*/
+    .dev_page_tgsticker {
+        position: relative;
+        display: block;
+        max-width: 256px;
+    }
+
+    .tl_main_card_animated {
+        width: 160px;
+        margin: 0 auto;
+    }
+    /** HEY **/
 }
