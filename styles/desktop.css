@@ -284,7 +284,7 @@
     }
 
     .postbox .emoji-container {
-        width: 33.33%;
+        width: 260px;
         display: block;
         float: left;
     }
@@ -503,6 +503,8 @@
     /* HEEEY*/
     .dev_page_tgsticker {
         position: relative;
+        left: -36px;
+        top: -72px;
         display: block;
         max-width: 256px;
     }
