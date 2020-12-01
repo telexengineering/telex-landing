@@ -508,7 +508,9 @@
     }
 
     .tl_main_card_animated {
-        width: 160px;
+        /* width: 160px; */
+        width: 150px;
+        height: 150px;
         margin: 0 auto;
     }
     /** HEY **/
