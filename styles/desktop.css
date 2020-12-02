@@ -522,7 +522,7 @@
 
     .tl_main_card_animated {
         /* width: 160px; */
-        width: 120px;
+        width: 160px;
         /* height: 150px; */
         margin: 0 auto;
     }
@@ -535,7 +535,7 @@
         position: relative;
         left: -50%;
     } */
-    
+
     .dev_page_tgsticker img, .dev_page_tgsticker canvas {
         position: absolute;
         top: 0;
