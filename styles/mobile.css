@@ -154,6 +154,11 @@
     
     .dark-container hr {
         margin: 5vh 10vw 5vh 10vw;
+        border-top-width: 0px;
+        border-bottom-width: 1px;
+        border-color: rgba(255,255,255,0.8);
+        clear: left;
+        position: relative;
     }
     
     .postbox {
@@ -512,6 +517,7 @@
     .tl_main_card_cell {
         width: 100%;
         float: left;
+        margin-bottom: 26px;
     }
 
     .dev_page_tgsticker {
