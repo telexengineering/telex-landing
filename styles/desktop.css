@@ -509,6 +509,7 @@
 
     .tl_main_card_cell {
         width: 33.33333%;
+        float: left;
     }
 
     .dev_page_tgsticker {
@@ -527,7 +528,8 @@
     }
 
     .tl_main_card_animated div {
-        padding-top: 100%;
+        /* padding-top: 100%; */
+        padding-top: 1%;
     }
     /** HEY **/
 }
