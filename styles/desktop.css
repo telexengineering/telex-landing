@@ -515,5 +515,9 @@
         height: 150px;
         margin: 0 auto;
     }
+
+    .tl_main_card_animated div {
+        padding-top: 100%;
+    }
     /** HEY **/
 }
