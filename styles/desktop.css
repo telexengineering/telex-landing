@@ -530,6 +530,7 @@
     .tl_main_card_animated div {
         /* padding-top: 100%; */
         padding-top: 100%;
+        display: none;
     }
 
     .tl_main_card_animated canvas {
