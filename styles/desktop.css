@@ -527,18 +527,8 @@
         margin: 0 auto;
     }
 
-    @keyframes resize-padding {
-        100% {padding-top: 0px;}
-        /* 50%  {padding-top: 100px;} */
-        /* 100% {margin-left: 40px;} */
-    }
-
     .tl_main_card_animated div {
-        /* padding-top: 100%; */
         padding-top: 100%;
-        animation: resize-padding 0.5s linear forwards;
-        animation-play-state: playing;
-        animation-delay: 5s;
     }
 
     .tl_main_card_animated canvas {
