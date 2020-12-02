@@ -510,19 +510,19 @@
     .tl_main_card_cell {
         width: 33.33333%;
     }
-    
+
     .dev_page_tgsticker {
         position: relative;
-        left: -36px;
-        top: -72px;
+        /* left: -36px; */
+        /* top: -72px; */
         display: block;
         max-width: 256px;
     }
 
     .tl_main_card_animated {
         /* width: 160px; */
-        width: 150px;
-        height: 150px;
+        width: 160px;
+        /* height: 150px; */
         margin: 0 auto;
     }
 
