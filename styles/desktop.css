@@ -538,7 +538,7 @@
         padding-top: 100%;
         animation: resize-padding 0.5s linear forwards;
         animation-play-state: playing;
-        animation-delay: 1s;
+        animation-delay: 5s;
     }
 
     .tl_main_card_animated canvas {
