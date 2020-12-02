@@ -501,6 +501,16 @@
     /* end of plane animation */
 
     /* HEEEY*/
+    .tl_main_card_wrap {
+        max-width: 260px;
+        margin: 0 auto;
+        padding: 20px 0 9px;
+    }
+
+    .tl_main_card_cell {
+        width: 33.33333%;
+    }
+    
     .dev_page_tgsticker {
         position: relative;
         left: -36px;
