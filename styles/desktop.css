@@ -531,5 +531,10 @@
         /* padding-top: 100%; */
         padding-top: 100%;
     }
+
+    .tl_main_card_animated canvas {
+        position: relative;
+        left: -50%;
+    }
     /** HEY **/
 }
