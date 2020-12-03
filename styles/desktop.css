@@ -419,8 +419,8 @@
         left: 0px;
         top: 0px;
         opacity: 0.5;
-        width: 110%;
-        height: 110%;
+        width: 105%;
+        height: 105%;
         z-index: 0;
         pointer-events: none;
         /* position: absolute; */
