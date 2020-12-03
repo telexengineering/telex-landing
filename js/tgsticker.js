@@ -10,7 +10,7 @@ var RLottie = (function () {
   
     rlottie.Api = {};
     rlottie.players = Object.create(null);;
-    rlottie.WORKERS_LIMIT = 8;
+    rlottie.WORKERS_LIMIT = 4;
   
     var reqId = 0;
     var mainLoopTO = false;
