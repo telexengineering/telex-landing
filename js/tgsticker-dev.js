@@ -22,10 +22,8 @@ var RLottie = (function () {
     var userAgent = window.navigator.userAgent;
     var isSafari = !!window.safari ||
                    !!(userAgent && (/\b(iPad|iPhone|iPod)\b/.test(userAgent) || (!!userAgent.match('Safari') && !userAgent.match('Chrome'))));
-    // var isRAF = isSafari;
-    var isRAF = true;
-    // rlottie.isSafari = isSafari;
-    rlottie.isSafari = true;
+    var isRAF = isSafari;
+    rlottie.isSafari = isSafari;
   
     function wasmIsSupported() {
       try {
@@ -342,9 +340,9 @@ var RLottie = (function () {
       rlPlayer.canvas.height = rlPlayer.height;
       rlPlayer.el.appendChild(rlPlayer.canvas);
       rlPlayer.context = rlPlayer.canvas.getContext('2d');
-      
+  
       rlPlayer.fps = fps;
-      console.log('onLoaded fps'+fps +' '+rlPlayer.fps);
+      console.log('onLoaded fps'+fps);
       
       rlPlayer.frameInterval = 1000 / rlPlayer.fps;
       console.log('onLoaded frameInterval'+rlPlayer.frameInterval);
