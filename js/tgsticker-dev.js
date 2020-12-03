@@ -64,11 +64,17 @@ var RLottie = (function () {
         rlPlayer = rlottie.players[key];
         if (rlPlayer &&
             rlPlayer.frameCount) {
+            console.log(dT(), 'rlPlayer.frameCount:' + rlPlayer.frameCount);
+
           delta = now - rlPlayer.frameThen;
+          console.log(dT(), 'now - rlPlayer.frameThen:' + delta);
+
           if (delta > rlPlayer.frameInterval) {
             rendered = render(rlPlayer, checkViewport);
             if (rendered) {
               lastRenderDate = now;
+              console.log(dT(), 'lastRenderDate:' + lastRenderDate);
+
             }
           }
         }
@@ -79,6 +85,8 @@ var RLottie = (function () {
       } else {
         mainLoopTO = setTimeout(mainLoop, delay);
       }
+      console.log(dT(), 'mainLoopTO:' + mainLoopTO);
+
       if (checkViewport) {
         checkViewportDate = now;
       }
