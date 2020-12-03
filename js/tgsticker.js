@@ -10,7 +10,7 @@ var RLottie = (function () {
   
     rlottie.Api = {};
     rlottie.players = Object.create(null);;
-    rlottie.WORKERS_LIMIT = 4;
+    rlottie.WORKERS_LIMIT = 8;
   
     var reqId = 0;
     var mainLoopTO = false;
@@ -68,10 +68,6 @@ var RLottie = (function () {
         }
       }
       var delay = now - lastRenderDate < 100 ? 16 : 500;
-      
-      console.log("delay");
-      console.log(delay);
-
       if (delay < 20 && isRAF) {
         mainLoopTO = requestAnimationFrame(mainLoop)
       } else {
