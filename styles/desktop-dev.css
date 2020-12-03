@@ -1,0 +1,569 @@
+@media screen and (min-width: 900px) {
+    @font-face {
+        font-family: sfpro-display;
+        src: url('../fonts/sfpro-display.ttf');
+    }
+    
+    @font-face {
+        font-family: sfpro-display;
+        src: url('../fonts/sfpro-display-bold.ttf');
+        font-weight: bold;
+    }
+    
+    @font-face {
+        font-family: sfpro-display-black;
+        src: url('../fonts/sfpro-display-black.ttf');
+    }
+    
+    body {
+        margin: 0px;
+        font-family: sfpro-display;
+        overflow-x: hidden;
+        background-color: #000000;
+    }
+    
+    /** Start of navbar **/
+    .navbar-open {
+        overflow-y: hidden;
+    }
+    
+    .navbar {
+        width:100%;
+        height:49px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background: rgba(0,0,0,0.7);
+        z-index:3;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        overflow:hidden;
+    }
+    
+    .navbar .download-btn {
+        background-image: linear-gradient(to right, #8917D8,#3085FF);
+        width: 110px;
+        color: rgba(255,255,255,0.8);
+        padding: 7px;
+        text-align: center;
+        border-radius: 20px;
+        position: absolute;
+        right: 2vw;
+        top: 1.5vh;
+        cursor:pointer;
+    }
+
+    .navbar .links-list {
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        padding-top: 15px;
+        margin-left: 128px;
+        font-size: 18px;
+    }
+
+    .navbar .links-list a, .navbar .links-list a:visited {
+        display: block;
+        width: 12vw;
+        float: left;
+        text-align: center;
+        color: rgba(255,255,255,0.6);
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .navbar .links-list a.selected {
+        color: #8917D8;
+        font-weight: bold;
+        border-style: solid;
+        border-width:0 0 3px 0;
+        border-color: #8917D8;
+        padding-bottom: 10px;
+    }
+
+    .navbar .links-list a:hover {
+        color: #8917D8;
+        padding-bottom: 10px;
+    }
+    
+    .globe {
+        width: 22px;
+        position: relative;
+        left: 17px;
+        top: 14px;
+    }
+    
+    .navbar-toggler {
+        position: relative;
+        left: 74%;
+        top: 10px;
+        width: 30px;
+    }
+    
+    .lang-dropdown-list {
+        background-color: rgba(255,255,255,1);
+        z-index: 3;
+        border-radius: 12px;
+        width:120px;
+        display:none;
+    }
+    
+    .lang-dropdown-list ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .lang-dropdown-list li {
+        border-radius: 5px;
+        width: 90%;
+        padding: 6px;
+    }
+    
+    .lang-dropdown-list a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .lang-dropdown-list li:active {
+        background-color: gray;
+    }
+    
+    .footer-lang-dropdown-list {
+        position: absolute;
+        left: 70%;
+    }
+    
+    #mobile-navbar {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(0,0,0,1);
+        display:none;
+        color: rgba(255,255,255,0.7);
+        padding-top: 10%;
+    }
+    
+    #mobile-navbar ul {
+        list-style-type: none;
+        padding: 0 10% 0 10%;
+    }
+    
+    #mobile-navbar ul li {
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        padding: 7px 0 7px 0px;
+        font-size: 20px;
+    }
+    
+    .selected-lang {
+        font-family: monospace;
+        font-style: normal;
+        font-size: 16px;
+        color: rgba(255,255,255,0.6);
+        position: relative;
+        left: 19px;
+        top: 8px;
+    }
+    
+    .navbar .lang-arrow {
+        position: relative;
+        top: 7px;
+        left: 19px;
+        width: 12px;
+    }
+    /** End of navbar **/
+    
+    /** start of body containers **/
+    .dark-container {
+        background-color: #000000;
+        z-index:0;
+        overflow: auto;
+    }
+    
+    .dark-container hr {
+        margin: 5vh 2vw 5vh 2vw;
+        border-top-width: 0px;
+        border-bottom-width: 1px;
+        border-color: rgba(255,255,255,0.8);
+        clear: left;
+        position: relative;
+        top: 42px;
+    }
+    
+    .postbox {
+        color: #ffffff;
+        width: 80vw;
+        height: 50%;
+        margin: 10% auto 10% auto;
+        border-radius: 20px;
+        display:block;
+    }
+    
+    .postbox .telex-heading {
+        font-family: Helvetica;
+        font-size: 70px;
+        font-style: normal;
+        margin-left: 4px;
+    }
+    
+    .first-postbox .text-part {
+        margin-top: 3%;
+        width: calc(100% - 270px);
+    }
+
+    .first-postbox .image-part {
+        position: absolute;
+        top: 14%;
+        right: 5%;
+        width: 270px;
+    }
+
+    .first-postbox .sample-heading-iphone {
+        width: 270px;
+    }
+
+    .first-postbox .heading1 {
+        text-align: center;
+    }
+
+    .postbox .heading2 {
+        text-align: center;
+        font-size: 36px;
+        padding-top: 15px;
+    }
+    
+    .postbox .heading2 .normal {
+        font-style: normal;
+    }
+
+    .postbox .heading2 .colored-motto {
+        color: #29AAED;
+        font-style: normal;
+    }
+    
+    .postbox .desc {
+        margin: 1vh 0 1vh 0;
+    }
+    
+    .first-postbox {
+        margin-top: 7vh;
+        padding-top: 3vh;
+    }
+
+    .first-postbox .download-btn {
+        background-image: linear-gradient(to right, #8917D8,#3085FF);
+        width: 252px;
+        color: rgba(255,255,255,0.8);
+        padding: 7px;
+        text-align: center;
+        border-radius: 20px;
+        margin-top: 4vh;
+        margin-left: auto;
+        margin-right: auto;
+        cursor:pointer;
+    }
+    
+    .postbox-large-text {
+        font-size: 32px;
+    }
+    
+    .postbox .heading3 {
+        display: block;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 34px;
+        margin-bottom: 3vh;
+    }
+    
+    .postbox .heading4 {
+        text-align: center;
+        font-weight:bold;
+        font-size: 27px;
+    }
+
+    .postbox .emoji-container {
+        width: 260px;
+        display: block;
+        float: left;
+    }
+
+    .postbox .animated-emoji {
+        width: 100%;
+    }
+
+    .lottie-player {
+        width: 300px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .postbox .emoji-title {
+        font-family: sfpro-display;
+        font-size: 27px;
+    }
+    
+    .postbox .orange-text {
+        font-style: normal;
+        color: #ece3b6;
+    }
+    
+    .postbox .yellow-text {
+        font-style: normal;
+        color: #f8f954;
+    }
+    /** end of body containers **/
+    
+    .telex-logo-white {
+        width: 60px;
+        margin-right: 4px;
+    }
+    
+    /** start of slidable tips **/
+    .slidable-list {
+        list-style-type: none;
+        padding-inline-start: 0;
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+    
+    .slidable-list li {
+        font-size: 20px;
+        border-style: solid;
+        border-color: rgba(255,255,255,0.2);
+        border-width: 0 0 1px 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .tips-toggler-li:hover {
+        color: #29AAED;
+        cursor: pointer;
+    }
+    
+    .slide-second-row {
+        font-size: 18px;
+        color: rgba(255,255,255,0.7);
+        padding: 10px 0 10px 0;
+        display: none;
+    }
+    
+    .slide-second-row a:link, .slide-second-row a:visited {
+        color: #29AAED;
+        text-decoration: none;
+    }
+    
+    .slide-second-row a:hover {
+        text-decoration: underline;
+    }
+    
+    .slidable-list-item-toggler {
+        width: 18px;
+        position: relative;
+        top: 3px;
+        float: right;
+        transition: top .1s ease .2s, transform .2s ease .1s;
+        -webkit-transition: top .1s ease .2s, -webkit-transform .2s ease .1s;
+    }
+    
+    .slidable-list-item-toggler.active {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        transition: top .1s ease .2s, transform .2s ease .1s;
+        -webkit-transition: top .1s ease .2s, -webkit-transform .2s ease .1s;
+    }
+    
+    .tips-toggler-endnote {
+        font-size: 17px;
+        font-weight: bold;
+        padding-left: 20%;
+    }
+    /** end of slidable tips **/
+    
+    .feature-screenshot-container {
+        /* width: 30vw; */
+        width: 30%;
+        /* height: 37.5vh; */
+        /* padding: 11vh; */
+        display: block;
+        float: left;
+        margin: 1.6%;
+        /* background-image: url('../images/rect-shadow.png'); */
+        /* background-repeat: no-repeat; */
+        /* background-size: 100% 100%; */
+        position: relative;
+    }
+
+    /* .feature-screenshot-backblur {
+        width: 288px;
+        height: 366.53px;
+        background-image: linear-gradient(to right, #0088FF,#FF5C87);
+        backdrop-filter: blur(47px);
+        z-index: 1;
+        opacity: 0.7;
+        filter: blur(47px);
+    } */
+
+    .feature-screenshot-container::before {
+        /* width: 80%; */
+        /* width: 14.6vw; */
+        /* background: linear-gradient(90deg, #0088ff 0%, #a033ff 55.81%, #ff5c87 109.33%); */
+        background-image: linear-gradient(to right, #0088FF,#FF5C87);
+        /* border-radius: 20px; */
+        content: ' ';
+        -webkit-filter: blur(47px);
+        filter: blur(47px);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        opacity: 0.5;
+        width: 105%;
+        height: 105%;
+        z-index: 0;
+        pointer-events: none;
+        /* position: absolute; */
+        /* top: 16%; */
+        /* left: 26%; */
+    }
+
+    .feature-screenshot {
+        /* width: 80%; */
+        /* width: 14.6vw; */
+        width: 100%;
+        z-index: 2;
+        position: relative;
+        /* top: 16%; */
+        /* left: 26%; */
+    }
+
+    
+    .package-screenshot {
+        width: 30%;
+        margin: 1vh;
+    }
+    
+    .yellow-text {
+        color: rgba(255,230,1,0.91);
+    }
+    
+    .centralized-content {
+        text-align:center;
+    }
+    
+    /** start of footer part **/
+    .landing-footer {
+        background-color: #1d1d1f;
+        color: rgba(255,255,255,0.9);
+        height: 20vh;
+    }
+    
+    .footer-download-container {
+        position: absolute;
+        right: 10%;
+    }
+    
+    .footer-appstore-download-btn {
+        width: 161px;
+        height: 54px;
+        margin-top: 25%;
+    }
+    
+    .social-media-links {
+        position: absolute;
+        left: 10%;
+        margin-top: 4%;
+        margin-bottom: 5%;
+    }
+    
+    .social-media-icon {
+        height: 41px;
+        padding: 0 1.5vw 0 1.5vw;
+    }
+    
+    .footer-endnote {
+        font-size: 13px;
+        color: rgba(255,255,255,0.6);
+        padding-bottom: 5px;
+        font-weight: bold;
+        position: relative;
+        top: 14vh;
+        padding-left: 11.5%;
+    }
+    
+    .footer-links {
+        font-size: 13px;
+        color: rgba(255,255,255,0.4);
+        padding-bottom: 15px;
+        position: relative;
+        padding-left: 11.5%;
+        top: 14vh;    
+    }
+    /** end of footer part **/
+    
+    /* start of mobile navbar part */
+    #mobile-menu {
+        display: none;
+    }
+    /* end of mobile navbar part */
+    
+    /* start of plane animation */
+    #telex-logo {
+        width: 39px;
+        position: absolute;
+        top: 10%;
+        left: 17px;
+    }
+    
+    #top-lang-menu {
+        display: inline;
+        margin-left: 46px;
+        cursor: pointer;
+    }
+    
+    .nav-lang-dropdown-list {
+        position: fixed;
+        left: 40px;
+        top: 43px;
+    }
+    /* end of plane animation */
+
+    /* Start of Telegram Stickers section */
+    .tl_main_card_wrap {
+        max-width: 260px;
+        margin: 0 auto;
+        padding: 20px 0 9px;
+    }
+
+    .tl_main_card_cell {
+        width: 33.33333%;
+        float: left;
+    }
+
+    .dev_page_tgsticker {
+        position: relative;
+        display: block;
+        max-width: 256px;
+    }
+
+    .tl_main_card_animated {
+        width: 220px;
+        margin: 0 auto;
+    }
+
+    .tl_main_card_animated div {
+        padding-top: 100%;
+    }
+
+    .dev_page_tgsticker img, .dev_page_tgsticker canvas {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    /** End of Telegram Stickers section **/
+}
