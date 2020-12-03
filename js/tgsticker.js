@@ -68,6 +68,10 @@ var RLottie = (function () {
         }
       }
       var delay = now - lastRenderDate < 100 ? 16 : 500;
+      
+      console.log("delay");
+      console.log(delay);
+
       if (delay < 20 && isRAF) {
         mainLoopTO = requestAnimationFrame(mainLoop)
       } else {
