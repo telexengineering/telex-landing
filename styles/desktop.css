@@ -383,11 +383,15 @@
     /** end of slidable tips **/
     
     .feature-screenshot-container {
-        width: 288px;
-        height: 366.53px;
+        width: 30vw;
+        height: 37.5vh;
+        /* padding: 11vh; */
         display: block;
         float: left;
         margin: 1vh;
+        background-image: url('../images/rect-shadow.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
         position: relative;
     }
 
@@ -402,12 +406,12 @@
     }
 
     .feature-screenshot {
-        width: 288px;
-        height: 366.53px;
+        /* width: 80%; */
+        width: 14.6vw;
         z-index:2;
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 16%;
+        left: 26%;
     }
     
     .package-screenshot {
