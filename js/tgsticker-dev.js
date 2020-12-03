@@ -341,7 +341,8 @@ var RLottie = (function () {
       rlPlayer.el.appendChild(rlPlayer.canvas);
       rlPlayer.context = rlPlayer.canvas.getContext('2d');
   
-      rlPlayer.fps = fps;
+      // rlPlayer.fps = fps;
+      rlPlayer.fps = 120;
       console.log('onLoaded fps'+fps);
       
       rlPlayer.frameInterval = 1000 / rlPlayer.fps;
