@@ -1,6 +1,8 @@
 var RLottie = (function () {
     var rlottie = {}, apiInitStarted = false, apiInited = false, initCallbacks = [];
     var deviceRatio = window.devicePixelRatio || 1;
+    console.log('devicePixelRatio #' + deviceRatio);
+
     var rlottieWorkers = [], curWorkerNum = 0;
   
     var startTime = +(new Date());
@@ -50,10 +52,14 @@ var RLottie = (function () {
     rlottie.isSupported = isSupported();
   
     function mainLoop() {
+      console.log(dT(), 'tgsticker init');
+
       var key, rlPlayer, delta, rendered;
       var isEmpty = true;
       var now = +Date.now();
       var checkViewport = !checkViewportDate || (now - checkViewportDate) > 1000;
+      console.log(dT(), 'checkViewport:' + checkViewport);
+
       for (key in rlottie.players) {
         rlPlayer = rlottie.players[key];
         if (rlPlayer &&
