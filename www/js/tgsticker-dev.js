@@ -1,6 +1,8 @@
 var RLottie = (function () {
     var rlottie = {}, apiInitStarted = false, apiInited = false, initCallbacks = [];
     var deviceRatio = window.devicePixelRatio || 1;
+    console.log('devicePixelRatio #' + deviceRatio);
+
     var rlottieWorkers = [], curWorkerNum = 0;
   
     var startTime = +(new Date());
@@ -50,19 +52,29 @@ var RLottie = (function () {
     rlottie.isSupported = isSupported();
   
     function mainLoop() {
+      console.log(dT(), 'tgsticker init');
+
       var key, rlPlayer, delta, rendered;
       var isEmpty = true;
       var now = +Date.now();
       var checkViewport = !checkViewportDate || (now - checkViewportDate) > 1000;
+      console.log(dT(), 'checkViewport:' + checkViewport);
+
       for (key in rlottie.players) {
         rlPlayer = rlottie.players[key];
         if (rlPlayer &&
             rlPlayer.frameCount) {
+            console.log(dT(), 'rlPlayer.frameCount:' + rlPlayer.frameCount);
+
           delta = now - rlPlayer.frameThen;
+          console.log(dT(), 'now - rlPlayer.frameThen:' + delta);
+
           if (delta > rlPlayer.frameInterval) {
             rendered = render(rlPlayer, checkViewport);
             if (rendered) {
               lastRenderDate = now;
+              console.log(dT(), 'lastRenderDate:' + lastRenderDate);
+
             }
           }
         }
@@ -73,6 +85,8 @@ var RLottie = (function () {
       } else {
         mainLoopTO = setTimeout(mainLoop, delay);
       }
+      console.log(dT(), 'mainLoopTO:' + mainLoopTO);
+
       if (checkViewport) {
         checkViewportDate = now;
       }
@@ -328,7 +342,11 @@ var RLottie = (function () {
       rlPlayer.context = rlPlayer.canvas.getContext('2d');
   
       rlPlayer.fps = fps;
+      console.log('onLoaded fps'+fps);
+      
       rlPlayer.frameInterval = 1000 / rlPlayer.fps;
+      console.log('onLoaded frameInterval'+rlPlayer.frameInterval);
+
       rlPlayer.frameThen = Date.now();
       rlPlayer.frameCount = frameCount;
       rlPlayer.forceRender = true;
